@@ -16,12 +16,9 @@ var cssFilter = filter('**/*.css', {restore: true});
 
 // Compile SCSS files from /scss into /css
 gulp.task('sass', function() {
-    // return gulp.src('css/*.scss')
-        // .pipe(less())
-        // .pipe(gulp.dest('dist/css'));
-    //     .pipe(browserSync.reload({
-    //         stream: true
-    //     }))
+    return gulp.src('css/*.scss')
+        .pipe(sass().on('error', sass.logError))
+        .pipe(gulp.dest('css'));
 });
 
 // Clean dist folder
@@ -31,7 +28,7 @@ gulp.task('clean', function () {
 });
 
 // Run everything
-gulp.task('default', ['less', 'clean'], function () {
+gulp.task('default', ['sass', 'clean'], function () {
     gulp.src('img/*.*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
