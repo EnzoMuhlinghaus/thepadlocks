@@ -10,10 +10,13 @@
     <!-- build:css css/min.css -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
     <link href="css/animate.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
+    <link href="css/player.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet">
     <!-- endbuild -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
@@ -180,24 +183,77 @@
             <div class="container">
                 <div class="row">
                     <h2>Notre Dernier Album</h2>
-                    <div class="col-md-8 nopdl">
+                    <div class="col-md-12">
+
                         <!-- Playlist -->
-                        <div id="cp_widget_2ad7d0a5-f80e-4ef9-885f-18cc279f501b"></div>
-                        <script type="text/javascript">
-                            var cpo = []; cpo["_object"] ="cp_widget_2ad7d0a5-f80e-4ef9-885f-18cc279f501b"; cpo["_fid"] = "A8EAV1NZVLhT";
-                            var _cpmp = _cpmp || []; _cpmp.push(cpo);
-                            (function() { var cp = document.createElement("script"); cp.type = "text/javascript";
-                                cp.async = true; cp.src = "//www.cincopa.com/media-platform/runtime/libasync.js";
-                                var c = document.getElementsByTagName("script")[0];
-                                c.parentNode.insertBefore(cp, c); })();
-                        </script>
-                    </div>
-                    <div class="col-md-4">
-                        <img class="img-responsive album" src="img/album.png" alt="album">
+                        <div class="wrap">
+                            <div class="player">
+                                <audio class="audio-player" src=""></audio>
+                                <div class="cover"></div>
+                                <div class="controls">
+                                    <button class="prev">
+                                        <i class="fa fa-step-backward"></i>
+                                    </button>
+                                    <button class="play">
+                                        <i class="fa fa-play"></i>
+                                    </button>
+                                    <button class="pause">
+                                        <i class="fa fa-pause"></i>
+                                    </button>
+                                    <button class="stop">
+                                        <i class="fa fa-stop"></i>
+                                    </button>
+                                    <button class="next">
+                                        <i class="fa fa-step-forward"></i>
+                                    </button>
+                                </div>
+                                <div class="timer">00:00</div>
+                                <div class="volume">
+                                    <button class="volume-down">
+                                        <i class="fa fa-volume-down"></i>
+                                    </button>
+                                    <button class="volume-up">
+                                        <i class="fa fa-volume-up"></i>
+                                    </button>
+                                </div>
+                                <progress class="progress" value="0" min="0" max="100" step="1"></progress>
+                            </div>
+                            <div class="track-list">
+                                <ul>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 01 Eleanor.mp3" data-cover="img/album.png">
+                                        <span class="title">Eleanor</span>
+                                        <span class="time"></span>
+                                    </li>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 02 Office Worker.mp3" data-cover="img/album.png">
+                                        <span class="title">Office Worker</span>
+                                        <span class="time"></span>
+                                    </li>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 03 Break Away.mp3" data-cover="img/album.png">
+                                        <span class="title">Break Away</span>
+                                        <span class="time"></span>
+                                    </li>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 04 Tired.mp3" data-cover="img/album.png">
+                                        <span class="title">Tired</span>
+                                        <span class="time"></span>
+                                    </li>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 05 Reckless Queen.mp3" data-cover="img/album.png">
+                                        <span class="title">Reckless Queen</span>
+                                        <span class="time"></span>
+                                    </li>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 06 You're On My Mind.mp3" data-cover="img/album.png">
+                                        <span class="title">You're On My Mind</span>
+                                        <span class="time"></span>
+                                    </li>
+                                    <li class="track-info active" data-url="audio/The Padlocks - Demos - 07 I Don't Want To.mp3" data-cover="img/album.png">
+                                        <span class="title">I Don't Want To</span>
+                                        <span class="time"></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
     </section><!--/#musique-->
 
     <!--<section id="contact">-->
@@ -269,6 +325,7 @@
     <script type="text/javascript" src="js/jquery.parallax.js"></script>
     <script type="text/javascript" src="js/jquery.scrollTo.js"></script>
     <script type="text/javascript" src="js/jquery.nav.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
     <script type="text/javascript" src="js/main.js"></script>
     <!-- endbuild -->
 

@@ -34,6 +34,8 @@ gulp.task('default', ['sass', 'clean'], function () {
         .pipe(gulp.dest('dist/img'));
     gulp.src('fonts/*')
         .pipe(gulp.dest('dist/fonts'));
+    gulp.src('audio/*')
+        .pipe(gulp.dest('dist/audio'));
     return gulp.src('*.html')
         .pipe(useref())
         // Minify Js

@@ -1,0 +1,197 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+@import url(https://fonts.googleapis.com/css?family=Fira+Mono);
+
+html, body {
+	background-color: gray;
+	font-family: Raleway, sans-serif;
+}
+
+.wrap {
+	background-color: orange;
+	display: flex;
+	height: 400px;
+	margin: auto;
+	position: relative;
+	width: 800px;
+	margin-bottom: 50px;
+}
+
+audio {
+	display: none;
+}
+
+.player {
+	background-color: transparentize(black, .5);
+	color: white;
+	flex-grow: 0;
+	height: 100%;
+	position: relative;
+	width: 50%;
+	
+	.cover {
+		background-image: linear-gradient(to bottom, transparentize(black, .25), transparentize(black, 1));
+		background-size: 100% 100%;
+		height: 100%;
+	}
+
+	&:hover {
+		.controls, .progress, .timer, .volume{
+			opacity: 1;
+		}
+	}
+	
+	.controls {
+		display: flex;
+		height: 13.33%;
+		left: 17.5%;
+		position: absolute;
+		top: 5%;
+		width: 65%;
+		transition: opacity .5s ease-out;
+		opacity: 0;
+		
+		button {
+			background-color: transparent;
+			border: 2px solid white;
+			border-radius: 50%;
+			color: white;
+			flex: 1 0 0;
+			font-size: 150%;
+			outline: none;
+			width: 2.25em;
+			
+			& + button {
+				margin-left: 5%;
+			}
+			
+			&:hover {
+				background-color: white;
+				color: black;
+				cursor: pointer;
+			}
+			
+			&.pause {
+				display: none;
+			}
+		}
+	}
+	
+	.volume {
+		left: 2.5%;
+		bottom: 12.5%;
+		position: absolute;
+		transition: opacity .5s ease-out;
+		opacity: 0;
+		
+		button {
+			background-color: transparent;
+			border: 2px solid white;
+			border-radius: 50%;
+			color: white;
+			font-size: 150%;
+			outline: none;
+			width: 1.5em;
+			
+			& + button {
+				margin-left: .25em;
+			}
+			
+			&:hover {
+				background-color: white;
+				color: black;
+				cursor: pointer;
+			}
+		}		
+	}
+	
+	.progress {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+   		appearance: none;
+		background-color: transparent;
+		border: 0;
+		bottom: 0;
+		height: 10%;
+		left: 0;
+		position: absolute;
+		width: 100%;
+		transition: opacity .5s ease-out;
+		
+		&::-moz-progress-bar, &::-webkit-progress-value {
+			background-color: white;
+		}
+		
+		&::-webkit-progress-bar {
+  			background-color: transparent;
+		}
+	}
+	
+	.timer {
+		border: 3px solid white;
+		border-radius: .75em;
+		bottom: 0;
+		font-family: Fira Mono;
+		font-size: 250%;
+		height: 1.5em;
+		left: 0;
+		line-height: 1.66em;
+		margin: auto;
+		position: absolute;
+		right: 0;
+		text-align: center;
+		top: 0;
+		width: 4em;
+		transition: opacity .5s ease-out;
+		opacity: 0;
+	}
+}
+
+.track-list {
+	flex: 1 0 0;
+	font-size: 1.25em;
+	
+	ul {
+		counter-reset: trackCounter;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		
+		.track-info {
+			counter-increment: trackCounter;
+			display: flex;
+			padding: .5em;
+			
+			&:before {
+				content: counter(trackCounter) ".";
+				margin-right: .25em;
+			}
+			
+			&.active {
+				color: white;
+				
+				.title:after {
+					content: ">";
+					margin-left: .5em;
+				}
+			}
+			
+			&:nth-child(even) {
+				background-color: transparentize(black, .75);
+			}
+			
+			&:hover {
+				background-color: transparentize(black, .66);
+				cursor: pointer;
+			}
+			
+			.title {
+				flex: 7 0 0;
+			}
+			
+			.time {
+				flex: 1 0 0;
+				text-align: right;
+			}
+		}
+	}
+}
