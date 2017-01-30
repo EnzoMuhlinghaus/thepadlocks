@@ -170,7 +170,8 @@ audio {
 				color: white;
 				
 				.title:after {
-					content: ">";
+					content: "\f001";
+					font-family: FontAwesome;
 					margin-left: .5em;
 				}
 			}

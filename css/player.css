@@ -127,7 +127,8 @@ audio {
       .track-list ul .track-info.active {
         color: white; }
         .track-list ul .track-info.active .title:after {
-          content: ">";
+          content: "\f001";
+          font-family: FontAwesome;
           margin-left: .5em; }
       .track-list ul .track-info:nth-child(even) {
         background-color: rgba(0, 0, 0, 0.25); }
