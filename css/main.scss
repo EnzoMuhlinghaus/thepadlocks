@@ -1,85 +1,105 @@
-@import url(http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
-@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
 @font-face {
   font-family: 'VivelaRivoluzione';
-  src: url("../fonts/VivelaRivoluzione.ttf") format("truetype");
+  src: url('../fonts/VivelaRivoluzione.ttf') format('truetype');
   font-weight: normal;
   font-style: normal; }
+
+@import url(http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200,700);
 
 /*************************
 *******Typography******
 **************************/
-.nopdl {
-  padding-left: 0 !important; }
+.nopdl{
+  padding-left: 0!important;
+}
 
 body {
   font-family: 'Dosis', sans-serif;
   font-size: 17px;
-  color: #fff; }
+  color: #fff
+}
+
 
 .btn {
   border-radius: 0;
   font-family: 'Yanone Kaffeesatz','sans-serif';
   font-size: 20px;
-  padding: 9px 23px; }
+  padding: 9px 23px;
+}
 
 a {
   -webkit-transition: 300ms;
   -moz-transition: 300ms;
   -o-transition: 300ms;
-  transition: 300ms; }
+  transition: 300ms;
+}
 
 a:focus,
 a:hover {
   text-decoration: none;
-  outline: none; }
+  outline: none
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Yanone Kaffeesatz', 'sans-serif';
   font-weight: 300;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 h2 {
-  font-size: 36px; }
+  font-size: 36px
+}
 
 .navbar-toggle {
-  margin-top: 12px; }
+  margin-top: 12px
+}
 
 .navbar-toggle .icon-bar {
-  background-color: #fff; }
+  background-color: #fff;
+}
 
 .navbar-toggle,
 .navbar-toggle:focus {
-  border: 1px solid #fff;
-  outline: none; }
+  border:1px solid #fff;
+  outline: none;
+}
+
 
 /*************************
 *******Header CSS******
 **************************/
+
 .header-top {
   display: block;
   overflow: hidden;
-  padding: 25px; }
+  padding: 25px;
+}
 
 .main-nav {
   position: absolute;
   width: 100%;
-  z-index: 999; }
+  z-index: 999;
+}
 
 .main-nav
 .container {
-  width: 100%; }
+  width: 100%
+}
 
 .social-icons a {
   font-size: 18px;
   color: #fff;
-  padding-left: 20px; }
+  padding-left:20px;
+}
 
-.social-icons a:hover .fa-facebook {
-  color: #3B5997; }
+.social-icons a:hover .fa-facebook{
+  color: #3B5997
+}
 
-.social-icons a:hover .fa-instagram {
-  color: #ec5675; }
+.social-icons a:hover .fa-instagram{
+  color: #ec5675
+}
 
 .navbar-brand {
   background-color: #1B7B98;
@@ -87,16 +107,19 @@ h2 {
   margin-bottom: 20px;
   position: relative;
   width: 325px;
-  display: none; }
+  display: none;
+}
 
 .navbar-brand img {
   position: absolute;
-  top: -22px; }
+  top: -22px;
+}
 
 .navbar-right {
   background-color: #1B7B98;
-  padding: 0 95px 0 0;
-  opacity: .9; }
+  padding:0 95px 0 0;
+  opacity: .9
+}
 
 .navbar-right li a {
   padding: 35px 21px;
@@ -104,54 +127,70 @@ h2 {
   color: #fff;
   text-transform: uppercase;
   font-family: 'Yanone Kaffeesatz', 'sans-serif';
-  font-weight: 300; }
+  font-weight: 300;
+}
 
 .navbar-right li a:hover,
 .navbar-right li a:focus,
 .navbar-right .active a {
   background-color: #fff;
-  color: #16728f; }
+  color: #16728f
+}
+
 
 .fixed-menu {
   background-color: #1B7B98;
   position: fixed;
-  top: 0; }
+  top: 0;
+}
 
 .fixed-menu .navbar-right {
-  padding: 0; }
+  padding: 0;
+}
+
 
 .fixed-menu .navbar-right li a {
   font-size: 18px;
   padding: 20px 25px;
-  text-shadow: inherit; }
+  text-shadow:inherit;
+}
 
 .fixed-menu .navbar-brand {
   height: 60px;
   margin-top: 0;
   padding: 0;
   margin-bottom: 0;
-  width: 125px; }
+  width: 125px;
+}
 
 .fixed-menu .navbar-brand img {
-  height: 60px;
+  height:60px;
   top: 0;
-  left: 10px; }
+  left: 10px;
+}
 
 .fixed-menu .header-top {
-  display: none; }
+  display: none;
+}
+
+
 
 /*************************
 *******Home CSS******
 **************************/
-.logo-slider {
+
+.logo-slider{
   opacity: 0.9;
   height: auto;
-  max-width: 100% !important; }
+  max-width: 100% !important;
+  //width: 100%;
+}
 
 .headerContent .headerText .titleWrapper .image-header img {
   max-width: 700px !important;
   height: auto;
-  width: 100%; }
+  width: 100%;
+}
 
 .headerContent {
   background: url("../img/slider/bg5.jpg") no-repeat top;
@@ -163,25 +202,30 @@ h2 {
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 2; }
+  z-index: 2;
+}
 
 .headerContent .headerText {
   display: table;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 .headerContent .headerText .titleWrapper {
   display: table-cell;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+}
 
 #home {
   position: relative;
   overflow: hidden;
-  height: 800px; }
+  height: 800px;
+}
 
 #main-slider img {
-  width: 100%; }
+  width: 100%
+}
 
 #main-slider
 .carousel-caption {
@@ -190,32 +234,40 @@ h2 {
   float: left;
   left: 0;
   opacity: 0.8;
-  padding: 10px 60px 35px;
+  padding:10px 60px 35px;
   right: inherit;
   text-transform: uppercase;
   color: #fff;
-  text-align: left; }
+  text-align: left;
+}
+
 
 #main-slider
 .carousel-caption h2 {
-  font-size: 38px; }
+  font-size: 38px;
+
+}
 
 #main-slider
 .carousel-caption h4 {
-  font-size: 24px; }
+  font-size: 24px;
+}
 
 #main-slider
 .carousel-caption a {
   font-size: 22px;
-  color: #2da1c5; }
+  color: #2da1c5
+}
 
 #main-slider
 .carousel-caption a:hover {
-  color: #2588a6; }
+  color: #2588a6
+}
 
 #main-slider
 .carousel-caption a:hover i {
-  margin-left: 35px; }
+  margin-left: 35px
+}
 
 #main-slider
 .carousel-caption a i {
@@ -224,44 +276,53 @@ h2 {
   -moz-transition: all 0.3s ease-in-out;
   -ms-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out; }
+  transition: all 0.3s ease-in-out;
+}
 
 #main-slider
 .carousel-indicators li {
-  background-color: #1B7B98;
-  border: 1px solid #1B7B98; }
+  background-color:#1B7B98;
+  border: 1px solid #1B7B98;
+}
 
 #main-slider
 .carousel-indicators li.active {
-  background-color: #fff;
-  border: 1px solid #fff; }
+  background-color:#fff;
+  border: 1px solid #fff;
+}
 
 /*************************
 *******Explore CSS******
 **************************/
+
 #explore {
   background-color: #ecedef;
   background-position: center bottom;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
   color: #3D3D3D;
   position: relative;
   overflow: hidden;
-  padding: 130px 0 100px; }
+  padding: 130px 0 100px;
+}
 
 #explore h2 {
   font-size: 42px;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+}
 
 #explore h1.titre {
   font-family: 'VivelaRivoluzione';
   text-align: center;
   font-size: 10em;
-  margin-bottom: 6%; }
+  margin-bottom: 6%;
+}
 
 #explore p {
-  text-align: justify; }
+  text-align: justify;
+}
+
 
 /*************************
 *******Event CSS******
@@ -271,12 +332,15 @@ h2 {
   background-position: 50% 0;
   background-size: contain;
   position: relative;
-  background-repeat: no-repeat; }
+  background-repeat: no-repeat;
+}
 
 .guitar {
   position: absolute;
-  right: 0;
-  top: 0; }
+  right:0;
+  top: 0
+}
+
 
 #team h2 {
   color: #FFFFFF;
@@ -284,14 +348,17 @@ h2 {
   font-weight: 300;
   margin-bottom: 40px;
   margin-top: 70px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .single-event {
-  margin-bottom: 70px; }
+  margin-bottom: 70px;
+}
 
-.single-event img {
+.single-event img{
   width: 262px;
-  height: 231px; }
+  height: 231px;
+}
 
 .single-event h4 {
   color: #FFFFFF;
@@ -299,159 +366,200 @@ h2 {
   font-weight: 300;
   line-height: 26px;
   margin-top: 25px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+}
 
 .single-event h5 {
   font-size: 18px;
   font-weight: 100;
-  display: block; }
+  display: block;
+}
 
 /*************************
 *******About CSS**********
 **************************/
+
 #about {
   background-color: #75B46E;
   position: relative;
   width: 100%;
-  display: flex; }
+  display: flex;
+}
 
 .guitar2 {
   top: 0;
-  width: 50%; }
+  width: 50%;
+}
 
 .guitar2 img {
-  padding-top: 3%; }
+  padding-top: 3%;
+}
 
 .about-content {
   width: 50%;
   background-position: left bottom;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 70px 70px 110px; }
+  padding: 70px 70px 110px;
+}
+
 
 #about h2 {
-  margin-bottom: 23px; }
+  margin-bottom: 23px;
+}
 
 .about-content p {
   font-size: 17px;
-  font-family: 'Dosis',sans-serif; }
+  font-family: 'Dosis',sans-serif;
+}
 
 #about .btn-primary {
   background-color: #137c61;
   color: #fff;
   text-transform: capitalize;
   border: none;
-  margin-top: 28px; }
+  margin-top: 28px;
+}
 
 #about .btn-primary:hover {
-  background-color: #126d55; }
+  background-color: #126d55
+}
+
+
 
 /*************************
 ******concert CSS****
 **************************/
+
 #concert {
   background-color: #ecedef;
   background-position: center bottom;
   background-size: contain;
-  background-repeat: no-repeat;
+  background-repeat:no-repeat;
   color: #3D3D3D;
   position: relative;
   overflow: hidden;
-  padding: 130px 0 100px; }
+  padding: 130px 0 100px;
+}
 
 #concert h2 {
   font-size: 42px;
   text-transform: uppercase;
-  text-align: center; }
+  text-align: center;
+}
 
 #concert p {
-  text-align: justify; }
+  text-align: justify;
+}
 
 /*************************
 ******Music CSS****
 **************************/
+
 #music {
   background-color: #33888f;
-  background-position: 50% 0;
+  background-position:50% 0;
   background-size: cover;
-  background-repeat: no-repeat;
-  position: relative; }
+  background-repeat:no-repeat;
+  position: relative;
+}
 
 #music .col-sm-10 {
-  z-index: 10; }
+  z-index: 10;
+}
 
 #music h2 {
   margin-top: 90px;
-  margin-bottom: 40px; }
+  margin-bottom: 40px;
+}
 
-.img-center {
+.img-center{
   display: block;
-  margin: 0 auto; }
+  margin: 0 auto;
+}
 
-.album {
+.album{
   margin-bottom: 15%;
   position: relative;
-  bottom: 40px; }
+  bottom: 40px;
+}
+
 
 /*************************
 ******Map CSS****
 **************************/
 #map {
-  position: relative; }
+  position: relative;
+}
 
 #gmap {
-  height: 450px; }
+  height:450px;
+}
+
 
 /*************************
 ******Contact CSS****
 **************************/
+
 .contact-section {
   background-color: #f7ab24;
-  background-position: 60% 0;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: relative; }
+  background-position:60% 0;
+  background-size:contain;
+  background-repeat:no-repeat;
+  position: relative;
+}
 
 .ear-piece {
   position: absolute;
   left: 0;
-  top: 0; }
+  top: 0;
+}
 
 #contact .container {
-  padding-top: 47px; }
+  padding-top:47px;
+}
 
 #contact h3 {
-  text-transform: inherit;
-  color: #373737; }
+  text-transform:inherit;
+  color: #373737;
+}
 
 #contact-section h3 {
-  margin-bottom: 25px; }
+  margin-bottom: 25px
+}
 
 #contact address {
   font-size: 18px;
-  color: #373737; }
+  color: #373737;
+}
 
 .contact-text {
   margin-bottom: 35px;
-  display: block; }
+  display: block;
+}
+
 
 #contact-section .form-control {
   border-color: #ae750d;
-  box-shadow: none;
+  box-shadow:none;
   outline: 0 none;
   border-radius: 0;
   color: #797979;
-  font-size: 18px; }
+  font-size: 18px;
+}
 
 #contact-section .form-control:focus {
-  border-color: #ae750d; }
+  border-color: #ae750d;
+}
 
 #contact-section input {
-  height: 44px; }
+  height: 44px;
+}
 
 #contact-section textarea {
   height: 90px;
-  resize: none; }
+  resize:none;
+}
 
 #contact-section .btn-primary {
   background-color: #373737;
@@ -460,15 +568,20 @@ h2 {
   font-size: 24px;
   padding: 6px 42px;
   margin-bottom: 110px;
-  margin-top: 10px; }
+  margin-top: 10px
+}
 
 #contact-section .btn-primary:hover {
   background-color: #212020;
-  color: #fff; }
+  color: #fff
+}
+
+
 
 /*************************
 ******Footer CSS****
 **************************/
+
 #footer {
   background-color: #212121;
   background-position: center bottom;
@@ -476,15 +589,24 @@ h2 {
   background-size: cover;
   color: #FFFFFF;
   font-size: 20px;
-  padding: 35px 0; }
+  padding: 35px 0;
+}
 
 #footer a {
-  color: #f7ab24; }
+  color:#f7ab24
+}
 
 #footer a:hover {
-  color: #1B7B98; }
+  color:#1B7B98
+}
 
 @media screen and (max-width: 550px) {
   #explore h1.titre {
     font-size: 6em;
-    margin-bottom: 30%; } }
+    margin-bottom: 30%;
+  }
+}
+
+
+
+
