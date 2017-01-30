@@ -29,10 +29,10 @@ gulp.task('clean', function () {
 
 // Run everything
 gulp.task('default', ['sass', 'clean'], function () {
-    gulp.src('img/*.*')
+    gulp.src('img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('dist/img'));
-    gulp.src('fonts/*.*')
+    gulp.src('fonts/*')
         .pipe(gulp.dest('dist/fonts'));
     return gulp.src('*.html')
         .pipe(useref())
