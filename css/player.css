@@ -5,7 +5,7 @@ html, body {
   font-family: Raleway, sans-serif; }
 
 .wrap {
-  background-color: orange;
+  background-color: #1d1919;
   display: flex;
   height: 400px;
   margin: auto;
@@ -17,18 +17,19 @@ audio {
   display: none; }
 
 .player {
-  background-color: rgba(0, 0, 0, 0.5);
   color: white;
   flex-grow: 0;
   height: 100%;
   position: relative;
   width: 50%; }
   .player .cover {
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent);
     background-size: 100% 100%;
-    height: 100%; }
+    height: 100%;
+    transition: opacity .5s ease-out; }
   .player:hover .controls, .player:hover .progress, .player:hover .timer, .player:hover .volume {
     opacity: 1; }
+  .player:hover .cover {
+    opacity: 0.6; }
   .player .controls {
     display: flex;
     height: 13.33%;

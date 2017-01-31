@@ -7,7 +7,7 @@ html, body {
 }
 
 .wrap {
-	background-color: orange;
+	background-color: #1d1919;
 	display: flex;
 	height: 400px;
 	margin: auto;
@@ -21,7 +21,6 @@ audio {
 }
 
 .player {
-	background-color: transparentize(black, .5);
 	color: white;
 	flex-grow: 0;
 	height: 100%;
@@ -29,14 +28,17 @@ audio {
 	width: 50%;
 	
 	.cover {
-		background-image: linear-gradient(to bottom, transparentize(black, .25), transparentize(black, 1));
 		background-size: 100% 100%;
 		height: 100%;
+		transition: opacity .5s ease-out;
 	}
 
 	&:hover {
 		.controls, .progress, .timer, .volume{
 			opacity: 1;
+		}
+		.cover {
+			opacity: 0.6;
 		}
 	}
 	

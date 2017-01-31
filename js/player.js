@@ -49,7 +49,7 @@ $(function () {
 		$(this).addClass("active")
 				.siblings().removeClass("active");
 		$(audioPlayer).attr("src", $(this).data("url"));
-		$(".cover").css({ "background-image" : "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0)), url(" + $(this).data("cover") + ")" });
+		$(".cover").css({ "background-image" : "url(" + $(this).data("cover") + ")" });
 		audioPlayer.play();
 	});
 	
@@ -108,8 +108,8 @@ $(function () {
 	
 	//load first track
 	$(audioPlayer).attr("src", $(".track-list li.active").data("url"));
-	$(".cover").css({ "background-image" : "linear-gradient(to bottom, rgba(0, 0, 0, .75), rgba(0, 0, 0, 0)), url(" + $(".track-list li.active").data("cover") + ")" });
-	
+	$(".cover").css({ "background-image" : "url(" + $(".track-list li.active").data("cover") + ")" });
+
 	(function animLoop() {
 		RAF(animLoop);
 		updatePlayer();
