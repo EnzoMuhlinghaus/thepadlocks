@@ -37,7 +37,10 @@ window.RAF = (function () {
 })();
 
 function updatePlayer () {
-	var percent = audioPlayer.currentTime / audioPlayer.duration * 100;
+	var percent = 0;
+	if(audioPlayer.currentTime && audioPlayer.duration){
+		percent = audioPlayer.currentTime / audioPlayer.duration * 100;
+	}
 	$(".progress").val(percent);
 	$(".timer").html(formatTime(audioPlayer.currentTime));
 }
