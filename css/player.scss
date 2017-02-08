@@ -1,200 +1,185 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-@import url(https://fonts.googleapis.com/css?family=Fira+Mono);
+$grey: #121214;
+$mid-grey: lighten($grey, 3.5%);
+$light-grey: lighten($grey, 5%);
+$lighter-grey: lighten($grey, 8%);
+$dark-grey: darken($grey, 2%);
+$white: #fff;
+$blue: #02a9ea;
 
-html, body {
-	background-color: gray;
-	font-family: Raleway, sans-serif;
+.text {
+  width: 100%;
+  margin: 0;
+  font-weight: normal;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
-.wrap {
-	background-color: #1d1919;
-	display: flex;
-	height: 400px;
-	margin: auto;
-	position: relative;
-	width: 800px;
-	margin-bottom: 50px;
-}
-
-audio {
-	display: none;
+.bttn {
+  padding: 20px;
+  background: none;
+  font-size: 20px;
+  color: $white;
+  border: none;
+  cursor: pointer;
 }
 
 .player {
-	color: white;
-	flex-grow: 0;
-	height: 100%;
-	position: relative;
-	width: 50%;
-	
-	.cover {
-		background-size: 100% 100%;
-		height: 100%;
-		transition: opacity .5s ease-out;
-	}
-
-	&:hover {
-		.controls, .progress, .timer, .volume{
-			opacity: 1;
-		}
-		.cover {
-			opacity: 0.6;
-		}
-	}
-	
-	.controls {
-		display: flex;
-		height: 13.33%;
-		left: 17.5%;
-		position: absolute;
-		top: 5%;
-		width: 65%;
-		transition: opacity .5s ease-out;
-		opacity: 0;
-		
-		button {
-			background-color: transparent;
-			border: 2px solid white;
-			border-radius: 50%;
-			color: white;
-			flex: 1 0 0;
-			font-size: 150%;
-			outline: none;
-			width: 2.25em;
-			
-			& + button {
-				margin-left: 5%;
-			}
-			
-			&:hover {
-				background-color: white;
-				color: black;
-				cursor: pointer;
-			}
-			
-			&.pause {
-				display: none;
-			}
-		}
-	}
-	
-	.volume {
-		left: 2.5%;
-		bottom: 12.5%;
-		position: absolute;
-		transition: opacity .5s ease-out;
-		opacity: 0;
-		
-		button {
-			background-color: transparent;
-			border: 2px solid white;
-			border-radius: 50%;
-			color: white;
-			font-size: 150%;
-			outline: none;
-			width: 1.5em;
-			
-			& + button {
-				margin-left: .25em;
-			}
-			
-			&:hover {
-				background-color: white;
-				color: black;
-				cursor: pointer;
-			}
-		}		
-	}
-	
-	.progress {
-		-moz-appearance: none;
-		-webkit-appearance: none;
-   		appearance: none;
-		background-color: transparent;
-		border: 0;
-		bottom: 0;
-		height: 10%;
-		left: 0;
-		position: absolute;
-		width: 100%;
-		transition: opacity .5s ease-out;
-		
-		&::-moz-progress-bar, &::-webkit-progress-value {
-			background-color: white;
-		}
-		
-		&::-webkit-progress-bar {
-  			background-color: transparent;
-		}
-	}
-	
-	.timer {
-		border: 3px solid white;
-		border-radius: .75em;
-		bottom: 0;
-		font-family: Fira Mono;
-		font-size: 250%;
-		height: 1.5em;
-		left: 0;
-		line-height: 1.66em;
-		margin: auto;
-		position: absolute;
-		right: 0;
-		text-align: center;
-		top: 0;
-		width: 4em;
-		transition: opacity .5s ease-out;
-		opacity: 0;
-	}
+  margin: 0 auto 10% auto;
+  $block: &;
+  width: 300px;
+  background: $mid-grey;
+  color: $white;
+  box-shadow: 0 0 30px 0 $dark-grey;
+  &__wrapper {
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      #{$block}__options {
+        opacity: 1;
+      }
+    }
+  }
+  &__holder {
+    position: relative;
+    height: 300px;
+    perspective: 500px;
+    &--flipped {
+      #{$block}__cover {
+        transform: rotateY(-180deg);
+      }
+      #{$block}__list {
+        transform: rotateY(0);
+      }
+    }
+  }
+  &__cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: center center / cover no-repeat;
+    transition: all .3s ease-out;
+    backface-visibility: hidden;
+    z-index: 100;
+    &:after {
+      display: none;
+      width: 100%;
+      height: 100%;
+      background: rgba(18, 18, 20, .6);
+      content: '?';
+      font-size: 100px;
+      font-weight: 300;
+      align-items: center;
+      justify-content: center;
+    }
+    &--error {
+      &:after {
+        display: flex;
+      }
+    }
+  }
+  &__list {
+    position: absolute;
+    width: 315px;
+    height: 100%;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    transform: rotateY(180deg);
+    transition: all .3s ease-out;
+    backface-visibility: hidden;
+  }
+  &__options {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    opacity: 0;
+    transition: all .3s ease-out;
+  }
+  &__info {
+    padding: 20px 25px;
+    height: 120px;
+  }
+  &__title,
+  &__artist {
+    @extend .text;
+  }
+  &__title {
+    margin-bottom: 5px;
+    font-size: 28px;
+  }
+  &__artist {
+    font-size: 18px;
+  }
+  &__progressbar-holder {
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+  }
+  &__progressbar {
+    width: 0;
+    height: 100%;
+    background: $white;
+    opacity: .8;
+    box-shadow: 0 0 8px 0 rgba(255, 255, 255, .3), 0 0 3px 0 rgba(255, 255, 255, .3);
+    transition: all .2s linear;
+  }
+  &__controls {
+    display: flex;
+    background: $light-grey;
+  }
 }
 
-.track-list {
-	flex: 1 0 0;
-	font-size: 1.25em;
-	
-	ul {
-		counter-reset: trackCounter;
-		list-style: none;
-		margin: 0;
-		padding: 0;
-		
-		.track-info {
-			counter-increment: trackCounter;
-			display: flex;
-			padding: .5em;
-			
-			&:before {
-				content: counter(trackCounter) ".";
-				margin-right: .25em;
-			}
-			
-			&.active {
-				color: white;
-				
-				.title:after {
-					content: "\f001";
-					font-family: FontAwesome;
-					margin-left: .5em;
-				}
-			}
-			
-			&:nth-child(even) {
-				background-color: transparentize(black, .75);
-			}
-			
-			&:hover {
-				background-color: transparentize(black, .66);
-				cursor: pointer;
-			}
-			
-			.title {
-				flex: 7 0 0;
-			}
-			
-			.time {
-				flex: 1 0 0;
-				text-align: right;
-			}
-		}
-	}
+.controls {
+  &__bttn {
+    background: $light-grey;
+    transition: all .2s linear;
+    flex-grow: 1;
+    &:hover {
+      background: $mid-grey;
+    }
+  }
+}
+
+.tracks {
+  background: $light-grey;
+  &__track {
+    padding: 13px 25px;
+    border-bottom: 1px solid $lighter-grey;
+    cursor: pointer;
+    &:last-child {
+      border: none;
+    }
+    &--active {
+      background: $lighter-grey;
+    }
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__title,
+  &__artist {
+    @extend .text;
+  }
+  &__title {
+    margin-bottom: 4px;
+    font-size: 17px;
+  }
+  &__artist {
+    font-size: 12px;
+  }
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  &__bttn {
+    transition: all .1s linear;
+    padding: 0px 20px 15px 20px;
+    &--active {
+      color: $blue;
+    }
+  }
 }

@@ -1,3 +1,6 @@
+$bgbleu:#73A1A5;
+$bgblanc:#ecedef;
+
 @font-face {
   font-family: 'VivelaRivoluzione';
   src: url('../fonts/VivelaRivoluzione.ttf') format('truetype');
@@ -10,6 +13,10 @@
 /*************************
 *******Typography******
 **************************/
+* {
+  outline: none !important;
+}
+
 .nopdl{
   padding-left: 0!important;
 }
@@ -296,7 +303,7 @@ h2 {
 **************************/
 
 #explore {
-  background-color: #ecedef;
+  background-color: $bgblanc;
   background-position: center bottom;
   background-size: contain;
   background-repeat:no-repeat;
@@ -328,7 +335,7 @@ h2 {
 *******Event CSS******
 **************************/
 #team {
-  background-color: #33888F;
+  background-color: $bgbleu;
   background-position: 50% 0;
   background-size: contain;
   position: relative;
@@ -376,63 +383,11 @@ h2 {
 }
 
 /*************************
-*******About CSS**********
-**************************/
-
-#about {
-  background-color: #75B46E;
-  position: relative;
-  width: 100%;
-  display: flex;
-}
-
-.guitar2 {
-  top: 0;
-  width: 50%;
-}
-
-.guitar2 img {
-  padding-top: 3%;
-}
-
-.about-content {
-  width: 50%;
-  background-position: left bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 70px 70px 110px;
-}
-
-
-#about h2 {
-  margin-bottom: 23px;
-}
-
-.about-content p {
-  font-size: 17px;
-  font-family: 'Dosis',sans-serif;
-}
-
-#about .btn-primary {
-  background-color: #137c61;
-  color: #fff;
-  text-transform: capitalize;
-  border: none;
-  margin-top: 28px;
-}
-
-#about .btn-primary:hover {
-  background-color: #126d55
-}
-
-
-
-/*************************
 ******concert CSS****
 **************************/
 
 #concert {
-  background-color: #ecedef;
+  background-color: $bgblanc;
   background-position: center bottom;
   background-size: contain;
   background-repeat:no-repeat;
@@ -457,14 +412,14 @@ h2 {
 **************************/
 
 #music {
-  background-color: #33888f;
+  background-color: $bgbleu;
   background-position:50% 0;
   background-size: cover;
   background-repeat:no-repeat;
   position: relative;
 }
 
-#music h2 {
+#music h2#album {
   margin-top: 90px;
   margin-bottom: 40px;
 }
