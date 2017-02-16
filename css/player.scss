@@ -99,6 +99,7 @@ $blue: #02a9ea;
   &__info {
     padding: 20px 25px;
     height: 120px;
+    position: relative;
   }
   &__title,
   &__artist {
@@ -173,6 +174,7 @@ $blue: #02a9ea;
 
 .options {
   display: flex;
+  opacity:1;
   flex-direction: column;
   justify-content: space-around;
   &__bttn {

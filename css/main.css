@@ -118,7 +118,8 @@ h2 {
 .fixed-menu {
   background-color: #1B7B98;
   position: fixed;
-  top: 0; }
+  top: 0;
+  z-index: 99999; }
 
 .fixed-menu .navbar-right {
   padding: 0; }
@@ -270,45 +271,46 @@ h2 {
 *******Event CSS******
 **************************/
 #team {
-  background-color: #73A1A5;
+  background-color: #c7c7c7;
   background-position: 50% 0;
   background-size: contain;
   position: relative;
   background-repeat: no-repeat; }
-
-.guitar {
-  position: absolute;
-  right: 0;
-  top: 0; }
-
-#team h2 {
-  color: #FFFFFF;
-  font-size: 36px;
-  font-weight: 300;
-  margin-bottom: 40px;
-  margin-top: 70px;
-  text-transform: uppercase; }
-
-.single-event {
-  margin-bottom: 70px; }
-
-.single-event img {
-  width: 262px;
-  height: 231px;
-  box-shadow: 0 0 15px 0 #0d0d0f; }
-
-.single-event h4 {
-  color: #FFFFFF;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 26px;
-  margin-top: 25px;
-  text-transform: uppercase; }
-
-.single-event h5 {
-  font-size: 18px;
-  font-weight: 100;
-  display: block; }
+  #team .rowTeam {
+    z-index: 999; }
+  #team h2 {
+    color: #181818;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    margin-top: 70px;
+    text-transform: uppercase; }
+  #team .guitar {
+    position: absolute;
+    right: 0;
+    top: 0; }
+  #team .guitarImg {
+    opacity: 0.7;
+    transform: rotateY(180deg);
+    max-width: 100%; }
+  #team .single-event h4 {
+    color: #181818;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 25px;
+    text-transform: uppercase; }
+  #team .single-event h5 {
+    color: #181818;
+    font-size: 18px;
+    font-weight: 400;
+    display: block; }
+  #team .single-event {
+    margin-bottom: 70px; }
+  #team .single-event img {
+    width: 262px;
+    height: 231px;
+    box-shadow: 0 0 15px 0 #0d0d0f; }
 
 /*************************
 ******concert CSS****
@@ -335,7 +337,7 @@ h2 {
 ******Music CSS****
 **************************/
 #music {
-  background-color: #73A1A5;
+  background-color: #c7c7c7;
   background-position: 50% 0;
   background-size: cover;
   background-repeat: no-repeat;

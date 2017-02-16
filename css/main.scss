@@ -1,4 +1,4 @@
-$bgbleu:#73A1A5;
+$bgbleu:#c7c7c7;
 $bgblanc:#ecedef;
 
 @font-face {
@@ -149,6 +149,7 @@ h2 {
   background-color: #1B7B98;
   position: fixed;
   top: 0;
+  z-index: 99999;
 }
 
 .fixed-menu .navbar-right {
@@ -334,53 +335,65 @@ h2 {
 /*************************
 *******Event CSS******
 **************************/
+$black : rgb(24, 24, 24);
+
 #team {
   background-color: $bgbleu;
   background-position: 50% 0;
   background-size: contain;
   position: relative;
   background-repeat: no-repeat;
-}
 
-.guitar {
-  position: absolute;
-  right:0;
-  top: 0
-}
+  .rowTeam {
+    z-index: 999;
+  }
 
+  h2 {
+    color: $black;
+    font-size: 36px;
+    font-weight: 300;
+    margin-bottom: 40px;
+    margin-top: 70px;
+    text-transform: uppercase;
+  }
 
-#team h2 {
-  color: #FFFFFF;
-  font-size: 36px;
-  font-weight: 300;
-  margin-bottom: 40px;
-  margin-top: 70px;
-  text-transform: uppercase;
-}
+  .guitar {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
 
-.single-event {
-  margin-bottom: 70px;
-}
+  .guitarImg {
+    opacity: 0.7;
+    transform: rotateY(180deg);
+    max-width: 100%;
+  }
 
-.single-event img{
-  width: 262px;
-  height: 231px;
-  box-shadow: 0 0 15px 0 #0d0d0f;
-}
+  .single-event h4 {
+    color: $black;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 26px;
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
 
-.single-event h4 {
-  color: #FFFFFF;
-  font-size: 24px;
-  font-weight: 300;
-  line-height: 26px;
-  margin-top: 25px;
-  text-transform: uppercase;
-}
+  .single-event h5 {
+    color: $black;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+  }
 
-.single-event h5 {
-  font-size: 18px;
-  font-weight: 100;
-  display: block;
+  .single-event {
+    margin-bottom: 70px;
+  }
+
+  .single-event img {
+    width: 262px;
+    height: 231px;
+    box-shadow: 0 0 15px 0 #0d0d0f;
+  }
 }
 
 /*************************

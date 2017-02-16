@@ -71,7 +71,8 @@
     transition: all .3s ease-out; }
   .player__info {
     padding: 20px 25px;
-    height: 120px; }
+    height: 120px;
+    position: relative; }
   .player__title {
     margin-bottom: 5px;
     font-size: 28px; }
@@ -120,6 +121,7 @@
 
 .options {
   display: flex;
+  opacity: 1;
   flex-direction: column;
   justify-content: space-around; }
   .options__bttn {
