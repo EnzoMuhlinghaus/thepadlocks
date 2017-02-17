@@ -364,8 +364,7 @@ $black : rgb(24, 24, 24);
   }
 
   .guitarImg {
-    opacity: 0.7;
-    transform: rotateY(180deg);
+    opacity: 0.5;
     max-width: 100%;
   }
 
@@ -401,7 +400,7 @@ $black : rgb(24, 24, 24);
 **************************/
 
 #concert {
-  background-color: $bgblanc;
+  background-color: $bgbleu;
   background-position: center bottom;
   background-size: contain;
   background-repeat:no-repeat;
@@ -426,7 +425,7 @@ $black : rgb(24, 24, 24);
 **************************/
 
 #music {
-  background-color: $bgbleu;
+  background-color: $bgblanc;
   background-position:50% 0;
   background-size: cover;
   background-repeat:no-repeat;
@@ -460,7 +459,7 @@ $black : rgb(24, 24, 24);
 **************************/
 
 .contact-section {
-  background-color: #f7ab24;
+  background-color: $bgbleu;
   background-position:60% 0;
   background-size:contain;
   background-repeat:no-repeat;

@@ -290,8 +290,7 @@ h2 {
     right: 0;
     top: 0; }
   #team .guitarImg {
-    opacity: 0.7;
-    transform: rotateY(180deg);
+    opacity: 0.5;
     max-width: 100%; }
   #team .single-event h4 {
     color: #181818;
@@ -316,7 +315,7 @@ h2 {
 ******concert CSS****
 **************************/
 #concert {
-  background-color: #ecedef;
+  background-color: #c7c7c7;
   background-position: center bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -337,7 +336,7 @@ h2 {
 ******Music CSS****
 **************************/
 #music {
-  background-color: #c7c7c7;
+  background-color: #ecedef;
   background-position: 50% 0;
   background-size: cover;
   background-repeat: no-repeat;
@@ -364,7 +363,7 @@ h2 {
 ******Contact CSS****
 **************************/
 .contact-section {
-  background-color: #f7ab24;
+  background-color: #c7c7c7;
   background-position: 60% 0;
   background-size: contain;
   background-repeat: no-repeat;
