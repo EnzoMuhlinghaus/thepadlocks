@@ -23,13 +23,6 @@ $(document).ready(function(){
 	}
 
 	menuToggle();
-	
-	
-	// Carousel Auto Slide Off
-	$('#event-carousel, #twitter-feed, #sponsor-carousel ').carousel({
-		interval: false
-	});
-
 
 	// Contact form validation
 	var form = $('.contact-form');
