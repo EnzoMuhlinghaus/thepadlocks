@@ -26,8 +26,8 @@ $noirclair : #373737;
 }
 
 body {
-  font-family: 'Dosis', sans-serif;
-  font-size: 17px;
+  font-family: "Courier New", sans-serif;
+  font-size: 14px;
   color: #fff
 }
 
@@ -53,7 +53,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-family: 'Yanone Kaffeesatz','sans-serif';
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -106,13 +106,11 @@ h2 {
   z-index: 999;
 }
 
-.main-nav
 .container {
   width: 100%
 }
 
 .social-icons a {
-  font-size: 18px;
   color: #fff;
   padding-left:20px;
 }
@@ -248,74 +246,6 @@ h2 {
   height: 800px;
 }
 
-#main-slider img {
-  width: 100%
-}
-
-#main-slider
-.carousel-caption {
-  background: none repeat scroll 0 0 #000000;
-  bottom: 14%;
-  float: left;
-  left: 0;
-  opacity: 0.8;
-  padding:10px 60px 35px;
-  right: inherit;
-  text-transform: uppercase;
-  color: #fff;
-  text-align: left;
-}
-
-
-#main-slider
-.carousel-caption h2 {
-  font-size: 38px;
-
-}
-
-#main-slider
-.carousel-caption h4 {
-  font-size: 24px;
-}
-
-#main-slider
-.carousel-caption a {
-  font-size: 22px;
-  color: #2da1c5
-}
-
-#main-slider
-.carousel-caption a:hover {
-  color: #2588a6
-}
-
-#main-slider
-.carousel-caption a:hover i {
-  margin-left: 35px
-}
-
-#main-slider
-.carousel-caption a i {
-  margin-left: 15px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -ms-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-#main-slider
-.carousel-indicators li {
-  background-color:#1B7B98;
-  border: 1px solid #1B7B98;
-}
-
-#main-slider
-.carousel-indicators li.active {
-  background-color:#fff;
-  border: 1px solid #fff;
-}
-
 /*************************
 *******Explore CSS******
 **************************/
@@ -325,7 +255,7 @@ h2 {
   background-position: center bottom;
   background-size: contain;
   background-repeat:no-repeat;
-  color: #3D3D3D;
+  color: $noirclair;
   position: relative;
   overflow: hidden;
   padding: 130px 0 100px;
@@ -409,10 +339,10 @@ h2 {
   background-position: center bottom;
   background-size: contain;
   background-repeat:no-repeat;
-  color: #3D3D3D;
+  color: $noirclair;
   position: relative;
   overflow: hidden;
-  padding: 130px 0 100px;
+  padding: 4% 9% 4% 9%;
 }
 
 #concert h2 {
@@ -426,6 +356,79 @@ h2 {
 }
 
 /*************************
+******galerie CSS****
+**************************/
+
+#galerie {
+  background-color: $bgblanc;
+  background-position: center bottom;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: $noirclair;
+  position: relative;
+  overflow: hidden;
+  padding: 4% 15% 7% 15%;
+
+  h2 {
+    color: $noirclair;
+    font-size: 42px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+#main-slider {
+  img {
+    width: 100%
+  }
+
+  .carousel-inner>.item {
+    height: 600px;
+  }
+
+  .carousel-indicators li {
+    background-color: #1B7B98;
+    border: 1px solid #1B7B98;
+  }
+
+  .carousel-indicators li.active {
+    background-color: #fff;
+    border: 1px solid #fff;
+  }
+}
+
+.galerie_link {
+  text-transform: uppercase;
+  text-align: right;
+  margin-top: 30px;
+  a {
+    h3{
+      font-size: 24px;
+      color: #2da1c5
+    }
+  }
+  a:hover {
+    color: #2588a6
+  }
+  a:hover i {
+    margin-left: 35px
+  }
+  a i {
+    margin-left: 15px;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+  }
+}
+
+
+/*************************
 ******Music CSS****
 **************************/
 
@@ -435,6 +438,7 @@ h2 {
   background-size: cover;
   background-repeat:no-repeat;
   position: relative;
+  color: $noirclair;
 }
 
 #music h2#album {
@@ -446,18 +450,6 @@ h2 {
   display: block;
   margin: 0 auto;
 }
-
-/*************************
-******Map CSS****
-**************************/
-#map {
-  position: relative;
-}
-
-#gmap {
-  height:450px;
-}
-
 
 /*************************
 ******Contact CSS****
@@ -492,7 +484,6 @@ h2 {
 }
 
 #contact address {
-  font-size: 18px;
   color: #373737;
 }
 
@@ -508,7 +499,6 @@ h2 {
   outline: 0 none;
   border-radius: 0;
   color: #797979;
-  font-size: 18px;
 }
 
 #contact-section .form-control:focus {
@@ -551,7 +541,7 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFFFFF;
-  font-size: 20px;
+  font-size: 15px;
   padding: 35px 0;
 }
 
