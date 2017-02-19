@@ -56,6 +56,17 @@ h2 {
   border: 1px solid #fff;
   outline: none; }
 
+.guitar {
+  position: absolute;
+  right: 0;
+  top: 0; }
+
+.guitarImg {
+  max-width: 100%; }
+
+.front {
+  z-index: 99; }
+
 /*************************
 *******Header CSS******
 **************************/
@@ -85,7 +96,7 @@ h2 {
   color: #ec5675; }
 
 .navbar-brand {
-  background-color: #1B7B98;
+  background-color: #f6aa23;
   height: 90px;
   margin-bottom: 20px;
   position: relative;
@@ -97,7 +108,7 @@ h2 {
   top: -22px; }
 
 .navbar-right {
-  background-color: #1B7B98;
+  background-color: #f6aa23;
   padding: 0 95px 0 0;
   opacity: .9; }
 
@@ -113,10 +124,10 @@ h2 {
 .navbar-right li a:focus,
 .navbar-right .active a {
   background-color: #fff;
-  color: #16728f; }
+  color: #f6aa23; }
 
 .fixed-menu {
-  background-color: #1B7B98;
+  background-color: #f6aa23;
   position: fixed;
   top: 0;
   z-index: 99999; }
@@ -285,13 +296,6 @@ h2 {
     margin-bottom: 40px;
     margin-top: 70px;
     text-transform: uppercase; }
-  #team .guitar {
-    position: absolute;
-    right: 0;
-    top: 0; }
-  #team .guitarImg {
-    opacity: 0.5;
-    max-width: 100%; }
   #team .single-event h4 {
     color: #181818;
     font-size: 24px;
@@ -367,7 +371,8 @@ h2 {
   background-position: 60% 0;
   background-size: contain;
   background-repeat: no-repeat;
-  position: relative; }
+  position: relative;
+  overflow: hidden; }
 
 .ear-piece {
   position: absolute;

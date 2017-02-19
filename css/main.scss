@@ -1,5 +1,9 @@
-$bgbleu:#c7c7c7;
+$bggris:#c7c7c7;
 $bgblanc:#ecedef;
+$header:#f6aa23; //#f6aa23; //
+$black : rgb(24, 24, 24);
+$noirclair : #373737;
+
 
 @font-face {
   font-family: 'VivelaRivoluzione';
@@ -72,6 +76,19 @@ h2 {
   outline: none;
 }
 
+.guitar {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.guitarImg {
+  max-width: 100%;
+}
+
+.front{
+  z-index: 99;
+}
 
 /*************************
 *******Header CSS******
@@ -109,7 +126,7 @@ h2 {
 }
 
 .navbar-brand {
-  background-color: #1B7B98;
+  background-color: $header;
   height: 90px;
   margin-bottom: 20px;
   position: relative;
@@ -123,7 +140,7 @@ h2 {
 }
 
 .navbar-right {
-  background-color: #1B7B98;
+  background-color: $header;
   padding:0 95px 0 0;
   opacity: .9
 }
@@ -141,12 +158,12 @@ h2 {
 .navbar-right li a:focus,
 .navbar-right .active a {
   background-color: #fff;
-  color: #16728f
+  color: $header;
 }
 
 
 .fixed-menu {
-  background-color: #1B7B98;
+  background-color: $header;
   position: fixed;
   top: 0;
   z-index: 99999;
@@ -335,10 +352,9 @@ h2 {
 /*************************
 *******Event CSS******
 **************************/
-$black : rgb(24, 24, 24);
 
 #team {
-  background-color: $bgbleu;
+  background-color: $bggris;
   background-position: 50% 0;
   background-size: contain;
   position: relative;
@@ -355,17 +371,6 @@ $black : rgb(24, 24, 24);
     margin-bottom: 40px;
     margin-top: 70px;
     text-transform: uppercase;
-  }
-
-  .guitar {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-
-  .guitarImg {
-    opacity: 0.5;
-    max-width: 100%;
   }
 
   .single-event h4 {
@@ -400,7 +405,7 @@ $black : rgb(24, 24, 24);
 **************************/
 
 #concert {
-  background-color: $bgbleu;
+  background-color: $bggris;
   background-position: center bottom;
   background-size: contain;
   background-repeat:no-repeat;
@@ -459,11 +464,12 @@ $black : rgb(24, 24, 24);
 **************************/
 
 .contact-section {
-  background-color: $bgbleu;
+  background-color: $bggris;
   background-position:60% 0;
   background-size:contain;
   background-repeat:no-repeat;
   position: relative;
+  overflow: hidden;
 }
 
 .ear-piece {
