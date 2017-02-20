@@ -26,8 +26,10 @@ $noirclair : #373737;
 }
 
 body {
-  font-family: "Courier New", sans-serif;
-  font-size: 14px;
+  //font-family: "Courier New", sans-serif;
+  //font-size: 14px;
+  font-family: 'Dosis', sans-serif;
+  font-size: 17px;
   color: #fff
 }
 
@@ -76,13 +78,13 @@ h2 {
   outline: none;
 }
 
-.guitar {
+.guitar, .old{
   position: absolute;
   right: 0;
   top: 0;
 }
 
-.guitarImg {
+.guitarImg , .oldImg{
   max-width: 100%;
 }
 
@@ -107,10 +109,13 @@ h2 {
 }
 
 .container {
-  width: 100%
+  width: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .social-icons a {
+  font-size: 18px;
   color: #fff;
   padding-left:20px;
 }
@@ -265,12 +270,13 @@ h2 {
   font-size: 42px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 #explore h1.titre {
   font-family: 'VivelaRivoluzione';
   text-align: center;
-  font-size: 10em;
+  font-size: 6em;
   margin-bottom: 6%;
 }
 
@@ -301,6 +307,7 @@ h2 {
     margin-bottom: 40px;
     margin-top: 70px;
     text-transform: uppercase;
+    text-align: center;
   }
 
   .single-event h4 {
@@ -343,6 +350,22 @@ h2 {
   position: relative;
   overflow: hidden;
   padding: 4% 9% 4% 9%;
+
+  .rowConcert {
+    z-index: 999;
+  }
+
+  table.concerts{
+    td {
+      border-top: 1px solid #E9E9E9;
+      padding: 20px 4px;
+      height: 36px;
+    }
+    th {
+      padding: 20px 4px;
+      height: 36px;
+    }
+  }
 }
 
 #concert h2 {
@@ -384,10 +407,6 @@ h2 {
 #main-slider {
   img {
     width: 100%
-  }
-
-  .carousel-inner>.item {
-    height: 600px;
   }
 
   .carousel-indicators li {
@@ -444,6 +463,7 @@ h2 {
 #music h2#album {
   margin-top: 90px;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 .img-center{
@@ -474,17 +494,18 @@ h2 {
   padding-top:47px;
 }
 
-#contact h3 {
+#contact h2 {
   text-transform:inherit;
   color: #373737;
 }
 
-#contact-section h3 {
+#contact-section h2 {
   margin-bottom: 25px
 }
 
 #contact address {
-  color: #373737;
+  font-size: 18px;
+  color: $noirclair;
 }
 
 .contact-text {
@@ -499,6 +520,7 @@ h2 {
   outline: 0 none;
   border-radius: 0;
   color: #797979;
+  font-size: 18px;
 }
 
 #contact-section .form-control:focus {
@@ -541,7 +563,8 @@ h2 {
   background-repeat: no-repeat;
   background-size: cover;
   color: #FFFFFF;
-  font-size: 15px;
+  font-size: 20px;
+  //font-size: 15px;
   padding: 35px 0;
 }
 
@@ -553,10 +576,39 @@ h2 {
   color:#1B7B98
 }
 
+
+//à ajouter dans responsive
 @media screen and (max-width: 550px) {
+
+}
+
+@media screen and (max-width: 990px) {
   #explore h1.titre {
-    font-size: 6em;
-    margin-bottom: 30%;
+    font-size: 1em;
+    margin-bottom: 0;
+    left: 800px;
+    position: relative;
+  }
+
+  .rowTeam{
+    text-align: center;
+    img{
+      margin: auto;
+    }
+  }
+
+  .player-container{
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #galerie{
+    padding: 4% 4% 7% 4%;
+  }
+
+  .img-thumbnail{
+    display: block;
+    margin: auto;
   }
 }
 

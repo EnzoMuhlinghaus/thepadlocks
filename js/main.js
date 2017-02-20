@@ -1,5 +1,4 @@
 $(document).ready(function(){
-	
 	//Scroll Menu
 	function menuToggle()
 	{
@@ -9,16 +8,14 @@ $(document).ready(function(){
 			$(window).on('scroll', function(){
 				if( $(window).scrollTop()>200 ){
 					$('.navbar-brand').show();
-					$('.main-nav').addClass('fixed-menu animated slideInDown');
+					$('.main-nav').addClass('fixed-menu animated zoominDown');
 				} else {
 					$('.navbar-brand').hide();
-					$('.main-nav').removeClass('fixed-menu animated slideInDown');
+					$('.main-nav').removeClass('fixed-menu animated zoominDown');
 				}
 			});
 		}else{
 			
-			$('.main-nav').addClass('fixed-menu animated slideInDown');
-				
 		}
 	}
 

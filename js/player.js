@@ -213,38 +213,38 @@ var Player = function() {
 var tracks = [{
   "title": "Eleanor",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 01 Eleanor.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 01 Eleanor.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }, {
   "title": "Office Worker",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 02 Office Worker.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 02 Office Worker.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }, {
   "title": "Break Away",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 03 Break Away.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 03 Break Away.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }, {
   "title": "Tired",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 04 Tired.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 04 Tired.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }, {
   "title": "Reckless Queen",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 05 Reckless Queen.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 05 Reckless Queen.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }, {
   "title": "You're On My Mind",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 06 You're On My Mind.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 06 You're On My Mind.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }, {
   "title": "I Don't Want To",
   "artist": "The Padlocks",
-  "source": "audio/The Padlocks - Demos - 07 I Don't Want To.mp3",
-  "cover": "img/album.png"
+  "source": "wp-content/themes/thepadlocks/audio/The Padlocks - Demos - 07 I Don't Want To.mp3",
+  "cover": "wp-content/themes/thepadlocks/img/album.png"
 }];
 
 Player.init(tracks);
