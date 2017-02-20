@@ -109,6 +109,10 @@
             <div class="row">
                 <div class="col-md-12 front">
                     <h2>PROCHAIN CONCERTS</h2>
+                    <?php
+                        $args = array( 'post_type' => 'dateconcerts', 'posts_per_page' => 10 );
+                        $the_query = new WP_Query( $args );
+                    ?>
                     <table cellpadding="0" cellspacing="0" class="concerts" width="100%">
                         <thead>
                             <tr>
@@ -118,11 +122,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="date">Mar 10</td>
-                                <td class="salle">Unviersity Great Hall</td>
-                                <td class="lieu">Cardiff, United Kingdom</td>
-                            </tr>
+                            <?php if ( $the_query->have_posts() ) : ?>
+                                <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                                    <tr>
+                                        <td class="date"><?php the_title(); ?></td>
+                                        <td class="salle"><?php the_title(); ?></td>
+                                        <td class="lieu"><?php the_title(); ?></td>
+                                    </tr>
+                                    <?php wp_reset_postdata(); ?>
+                                <?php endwhile;  ?>
+                            <?php else:  ?>
+                                <p><?php _e( 'Pas de concerts pour le moment.' ); ?></p>
+                            <?php endif; ?>
                             <tr>
                                 <td class="date">Mar 11</td>
                                 <td class="salle">Corn Exchange</td>
