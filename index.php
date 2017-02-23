@@ -73,8 +73,8 @@
                             </div>
                         </div>
                         <div class="player__info">
-                            <h1 class="player__title"></h1>
-                            <h2 class="player__artist"></h2>
+                            <h3 class="player__title"></h3>
+                            <h4 class="player__artist"></h4>
                             <div class="player__options options">
                                 <button class="bttn options__bttn options__bttn--random">
                                     <i class="fa fa-random"></i>
@@ -110,7 +110,7 @@
                 <div class="col-md-12 front">
                     <h2>PROCHAIN CONCERTS</h2>
                     <?php
-                        $args = array( 'post_type' => 'dateconcerts', 'posts_per_page' => 10 );
+                        $args = array( 'post_type' => 'dateconcerts', 'posts_per_page' => 20 );
                         $the_query = new WP_Query( $args );
                     ?>
                     <table cellpadding="0" cellspacing="0" class="concerts" width="100%">
@@ -119,26 +119,25 @@
                                 <th class="date">Date</th>
                                 <th class="salle">Salle</th>
                                 <th class="lieu">Lieu</th>
+                                <th class="lien"></th>
                             </tr>
                         </thead>
                         <tbody>
                             <?php if ( $the_query->have_posts() ) : ?>
                                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                                     <tr>
-                                        <td class="date"><?php the_title(); ?></td>
-                                        <td class="salle"><?php the_title(); ?></td>
-                                        <td class="lieu"><?php the_title(); ?></td>
+                                        <td class="date"><?php echo get_post_meta( get_the_ID(), 'date', true ); ?></td>
+                                        <td class="salle"><?php echo get_post_meta( get_the_ID(), 'salle', true ); ?></td>
+                                        <td class="lieu"><?php echo get_post_meta( get_the_ID(), 'lieu', true ); ?></td>
+                                        <td class="lieu">
+                                                <a target="_blank" class="infos" title="Plus d'informations" href="<?php echo get_post_meta( get_the_ID(), 'lien', true ); ?>">Infos</a>
+                                        </td>
                                     </tr>
                                     <?php wp_reset_postdata(); ?>
                                 <?php endwhile;  ?>
                             <?php else:  ?>
                                 <p><?php _e( 'Pas de concerts pour le moment.' ); ?></p>
                             <?php endif; ?>
-                            <tr>
-                                <td class="date">Mar 11</td>
-                                <td class="salle">Corn Exchange</td>
-                                <td class="lieu">Cambridge, United Kingdom</td>
-                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -165,13 +164,13 @@
                         <!-- Wrapper for slides -->
                         <div class="carousel-inner" role="listbox">
                             <div class="item active">
-                                <img src="<?php bloginfo('template_directory' ); ?>/img/slider/bg1.jpg">
+                                <img alt="bg1" src="<?php bloginfo('template_directory' ); ?>/img/slider/bg1.jpg">
                             </div>
                             <div class="item">
-                                <img src="<?php bloginfo('template_directory' ); ?>/img/slider/bg2.jpg" >
+                                <img alt="bg2" src="<?php bloginfo('template_directory' ); ?>/img/slider/bg2.jpg" >
                             </div>
                             <div class="item">
-                                <img src="<?php bloginfo('template_directory' ); ?>/img/slider/bg3.jpg" >
+                                <img alt="bg3" src="<?php bloginfo('template_directory' ); ?>/img/slider/bg3.jpg" >
                             </div>
                         </div>
 

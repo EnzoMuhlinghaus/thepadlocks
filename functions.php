@@ -47,8 +47,8 @@ function ajout_meta_boxes( $meta_boxes )
         'fields' => array(
             array(
                 'id'   => 'date',
-                'name' => __( 'Date', 'textdomain' ),
-                'type' => 'text',
+                'name' => __( 'Date', 'date' ),
+                'type' => 'date',
             ),
             array(
                 'id'   => 'salle',
@@ -58,6 +58,11 @@ function ajout_meta_boxes( $meta_boxes )
             array(
                 'id'   => 'lieu',
                 'name' => __( 'Lieu', 'textdomain' ),
+                'type' => 'text',
+            ),
+            array(
+                'id'   => 'lien',
+                'name' => __( 'Lien', 'textdomain' ),
                 'type' => 'text',
             ),
         )

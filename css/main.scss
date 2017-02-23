@@ -365,6 +365,10 @@ h2 {
       padding: 20px 4px;
       height: 36px;
     }
+    .infos{
+      color: $noirclair;
+      font-weight: bold;
+    }
   }
 }
 
@@ -410,8 +414,8 @@ h2 {
   }
 
   .carousel-indicators li {
-    background-color: #1B7B98;
-    border: 1px solid #1B7B98;
+    background-color: $header;
+    border: 1px solid $header;
   }
 
   .carousel-indicators li.active {
@@ -427,11 +431,11 @@ h2 {
   a {
     h3{
       font-size: 24px;
-      color: #2da1c5
+      color: $header
     }
   }
   a:hover {
-    color: #2588a6
+    color: $header
   }
   a:hover i {
     margin-left: 35px
@@ -515,16 +519,30 @@ h2 {
 
 
 #contact-section .form-control {
-  border-color: #ae750d;
-  box-shadow:none;
+  &:focus {
+    border-color: $header;
+  }
   outline: 0 none;
-  border-radius: 0;
   color: #797979;
   font-size: 18px;
+  border-radius: 0;
+  border-color: #ccc;
+  border-width: 0 0 2px 0;
+  border-style: none none solid none;
+  box-shadow: none;
 }
 
 #contact-section .form-control:focus {
-  border-color: #ae750d;
+  box-shadow: none;
+  border-color: $header;
+}
+
+.form-control:focus {
+
+}
+
+.form-control {
+
 }
 
 #contact-section input {
@@ -538,7 +556,7 @@ h2 {
 
 #contact-section .btn-primary {
   background-color: #373737;
-  color: #f7ab24;
+  color: $header;
   border: none;
   font-size: 24px;
   padding: 6px 42px;
@@ -569,11 +587,11 @@ h2 {
 }
 
 #footer a {
-  color:#f7ab24
+  color:darken($header, 15)
 }
 
 #footer a:hover {
-  color:#1B7B98
+  color: $header
 }
 
 

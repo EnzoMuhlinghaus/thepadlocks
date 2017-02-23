@@ -283,6 +283,9 @@ h2 {
   #concert table.concerts th {
     padding: 20px 4px;
     height: 36px; }
+  #concert table.concerts .infos {
+    color: #373737;
+    font-weight: bold; }
 
 #concert h2 {
   font-size: 42px;
@@ -317,8 +320,8 @@ h2 {
   width: 100%; }
 
 #main-slider .carousel-indicators li {
-  background-color: #1B7B98;
-  border: 1px solid #1B7B98; }
+  background-color: #f6aa23;
+  border: 1px solid #f6aa23; }
 
 #main-slider .carousel-indicators li.active {
   background-color: #fff;
@@ -330,9 +333,9 @@ h2 {
   margin-top: 30px; }
   .galerie_link a h3 {
     font-size: 24px;
-    color: #2da1c5; }
+    color: #f6aa23; }
   .galerie_link a:hover {
-    color: #2588a6; }
+    color: #f6aa23; }
   .galerie_link a:hover i {
     margin-left: 35px; }
   .galerie_link a i {
@@ -398,15 +401,20 @@ h2 {
   display: block; }
 
 #contact-section .form-control {
-  border-color: #ae750d;
-  box-shadow: none;
   outline: 0 none;
-  border-radius: 0;
   color: #797979;
-  font-size: 18px; }
+  font-size: 18px;
+  border-radius: 0;
+  border-color: #ccc;
+  border-width: 0 0 2px 0;
+  border-style: none none solid none;
+  box-shadow: none; }
+  #contact-section .form-control:focus {
+    border-color: #f6aa23; }
 
 #contact-section .form-control:focus {
-  border-color: #ae750d; }
+  box-shadow: none;
+  border-color: #f6aa23; }
 
 #contact-section input {
   height: 44px; }
@@ -417,7 +425,7 @@ h2 {
 
 #contact-section .btn-primary {
   background-color: #373737;
-  color: #f7ab24;
+  color: #f6aa23;
   border: none;
   font-size: 24px;
   padding: 6px 42px;
@@ -441,10 +449,10 @@ h2 {
   padding: 35px 0; }
 
 #footer a {
-  color: #f7ab24; }
+  color: #c48108; }
 
 #footer a:hover {
-  color: #1B7B98; }
+  color: #f6aa23; }
 
 @media screen and (max-width: 990px) {
   #explore h1.titre {

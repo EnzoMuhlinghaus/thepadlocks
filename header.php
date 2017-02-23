@@ -24,7 +24,7 @@
 
 <body <?php body_class();?>>
 <header id="header" role="banner">
-    <div class="main-nav fixed-menu">
+    <div class="main-nav">
         <div class="container">
             <div class="header-top">
                 <div class="pull-right social-icons">
@@ -40,7 +40,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="<?php bloginfo('url' ); ?>" style="display: inline;">
+                    <a class="navbar-brand" href="<?php bloginfo('url' ); ?>" style="display: none;">
                         <img class="img-responsive" src="<?php bloginfo('template_directory' ); ?>/img/logo.png" alt="logo">
                     </a>
                 </div>
@@ -66,7 +66,7 @@
         <div class="headerText ">
             <div class="titleWrapper ">
                 <a href="<?php bloginfo('url'); ?>" class="title">
-                    <h1><img class="logo-slider"  src="<?php bloginfo('template_directory' ); ?>/img/slider/bgwhite.png" alt="logo"></h1>
+                    <img class="logo-slider"  src="<?php bloginfo('template_directory' ); ?>/img/slider/bgwhite.png" alt="logo">
                 </a>
             </div>
         </div>
