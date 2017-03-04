@@ -30,6 +30,9 @@ $(document).ready(function(){
 		$this = $(this);
 		$.post($(this).attr('action'), function(data) {
 			$this.prev().text(data.message).fadeIn().delay(3000).fadeOut();
+			$(".contact-form input, .contact-form textarea").each(function(idx, val) {
+				$(this).val("");
+			});
 		},'json');
 		return false;
 	});

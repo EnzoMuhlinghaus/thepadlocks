@@ -153,41 +153,44 @@
             <div class="col-md-12">
                 <a href="#galerie">
                     <h2>GALERIE</h2>
-                    <div id="main-slider" class="carousel slide" data-ride="carousel">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img alt="bg1" src="<?php bloginfo('template_directory' ); ?>/img/slider/bg1.jpg">
-                            </div>
-                            <div class="item">
-                                <img alt="bg2" src="<?php bloginfo('template_directory' ); ?>/img/slider/bg2.jpg" >
-                            </div>
-                            <div class="item">
-                                <img alt="bg3" src="<?php bloginfo('template_directory' ); ?>/img/slider/bg3.jpg" >
-                            </div>
-                        </div>
-
-                        <!-- Left and right controls -->
-                        <a class="left carousel-control" href="#main-slider" role="button" data-slide="prev">
-                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="right carousel-control" href="#main-slider" role="button" data-slide="next">
-                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
-                    </div>
+                    <?php echo do_shortcode('[wonderplugin_gallery id="1"]'); ?>
+<!--                    <div id="main-slider" class="carousel slide" data-ride="carousel">-->
+<!--                        <!-- Indicators -->
+<!--                        <ol class="carousel-indicators">-->
+<!--                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>-->
+<!--                            <li data-target="#myCarousel" data-slide-to="1"></li>-->
+<!--                            <li data-target="#myCarousel" data-slide-to="2"></li>-->
+<!--                        </ol>-->
+<!---->
+<!--                        <!-- Wrapper for slides -->
+<!--                        <div class="carousel-inner" role="listbox">-->
+<!--                            <div class="item active">-->
+<!--                                <img alt="bg1" src="--><?php //bloginfo('template_directory' ); ?><!--/img/slider/bg1.jpg">-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img alt="bg2" src="--><?php //bloginfo('template_directory' ); ?><!--/img/slider/bg2.jpg" >-->
+<!--                            </div>-->
+<!--                            <div class="item">-->
+<!--                                <img alt="bg3" src="--><?php //bloginfo('template_directory' ); ?><!--/img/slider/bg3.jpg" >-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!---->
+<!--                        <!-- Left and right controls -->
+<!--                        <a class="left carousel-control" href="#main-slider" role="button" data-slide="prev">-->
+<!--                            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>-->
+<!--                            <span class="sr-only">Previous</span>-->
+<!--                        </a>-->
+<!--                        <a class="right carousel-control" href="#main-slider" role="button" data-slide="next">-->
+<!--                            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>-->
+<!--                            <span class="sr-only">Next</span>-->
+<!--                        </a>-->
+<!--                    </div>-->
                 </a>
                 <div class="galerie_link">
-                    <h3><a href="#galerie">Voir toute la galerie <i class="fa fa-angle-right"></i></a></h3>
+                    <h3><a href="#">Voir toute la galerie <i class="fa fa-angle-right"></i></a></h3>
                 </div>
+
+                <?php echo do_shortcode('[wonderplugin_gridgallery id="1"]'); ?>
             </div>
         </div>
     </section><!--/#galerie-->
@@ -200,7 +203,7 @@
                         <div id="contact-section">
                             <h2>Contactez nous !</h2>
                             <div class="status alert alert-success" style="display: none"></div>
-                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php">
+                            <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="<?php bloginfo('template_directory' ); ?>/sendemail.php">
                                 <div class="form-group">
                                     <input type="text" name="name" class="form-control" required="required" placeholder="Entrez votre nom">
                                 </div>
