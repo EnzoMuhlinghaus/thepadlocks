@@ -20,6 +20,10 @@ $(document).ready(function(){
 				}
 			});
 		}
+		else{
+			$('.navbar-brand').show();
+			$('.main-nav').addClass('fixed-menu animated zoominDown');
+		}
 	}
 
 	menuToggle();

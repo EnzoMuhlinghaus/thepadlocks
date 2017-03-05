@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/bootstrap.min.css">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/font-awesome.min.css">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/animate.css">
-    <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/main.css">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/player.css">
+    <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/main.css">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/responsive.css">
     <link rel="icon" href="<?php bloginfo("stylesheet_directory"); ?>/css/images/favicon.png">
 

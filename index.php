@@ -63,40 +63,77 @@
             <div class="row">
                 <div class="col-md-12 player-container">
                     <h2 id="album">ECOUTEZ NOUS !</h2>
-                    <div class="player">
-                        <div class="player__wrapper">
-                            <div class="player__holder">
-                                <div class="player__cover"></div>
-                                <div class="player__list tracks">
-                                    <ul class="tracks__list"></ul>
+
+                    <div class="page">
+                        <div class="player-wrap track-view light" data-url="//archive.org/download/mythium/JLS_ATI.mp3" data-title="All This Is - Joe L.'s Studio" data-artist="Mythium" style="background-image: url('https://lh4.googleusercontent.com/-myR3sCeFB4k/AAAAAAAAAAI/AAAAAAAAAyA/jb6y3Wns6T8/photo.jpg');">
+                            <audio preload></audio>
+                            <div class="player">
+                                <p class="title-text ellipsis"></p>
+                                <p class="artist-text ellipsis"></p>
+                                <div class="controls">
+                                    <div class="play-pause">
+                                        <div class="play-button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+                                                <path d="M43.3,11.1C36.6,7.1 30.3,9.6 30.3,18.6C30.3,27.6 30.3,121.3 30.3,131.7C30.3,142.1 35.6,144 43.6,139.7C51.6,134.7 133.5,87.5 141.5,83C149.3,78.5 149,72.5 141.5,68.2C134,63.8 52.2,16.4 43.3,11.1Z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="pause-button">
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                                <rect width="18%" height="90%" x="22.5%" y="5%" rx="5%" ry="5%"/>
+                                                <rect width="18%" height="90%" x="62.5%" y="5%" rx="5%" ry="5%"/>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                    <div class="prev-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M8.7 12L22 18.9V5.1L8.7 12z"/>
+                                            <path d="M0 12l11.3 6.9V5.1L0 12z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="next-button">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path d="M15.3 12L2 18.9V5.1L15.3 12z"/>
+                                            <path d="M24 12l-11.3 6.9V5.1L24 12z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="playlist-button">
+                                        <svg viewBox="0 0 48 48">
+                                            <rect width="67%" height="13%" x="28%" y="19%" rx="5%" ry="5%"/>
+                                            <rect width="67%" height="13%" x="28%" y="45%" rx="5%" ry="5%"/>
+                                            <rect width="67%" height="13%" x="28%" y="71%" rx="5%" ry="5%"/>
+                                            <rect width="13%" height="13%" x="5%" y="19%" rx="6.5%" ry="7.5%"/>
+                                            <rect width="13%" height="13%" x="5%" y="45%" rx="6.5%" ry="7.5%"/>
+                                            <rect width="13%" height="13%" x="5%" y="71%" rx="6.5%" ry="7.5%"/>
+                                        </svg>
+                                    </div>
+                                    <div class="seek-wrap"><input type="range" min="0" max="100" step=".1" value="0" class="seek-bar"></div>
+                                    <div class="current-time">0:00:00</div>
+                                    <div class="duration-time">0:00:00</div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="player__info">
-                            <h3 class="player__title"></h3>
-                            <h4 class="player__artist"></h4>
-                            <div class="player__options options">
-                                <button class="bttn options__bttn options__bttn--random">
-                                    <i class="fa fa-random"></i>
-                                </button>
-                                <button class="bttn options__bttn options__bttn--playlist">
-                                    <i class="fa fa-bars"></i>
-                                </button>
+                            <div class="big-play-pause">
+                                <div class="big-play-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 150">
+                                        <path d="M43.3,11.1C36.6,7.1 30.3,9.6 30.3,18.6C30.3,27.6 30.3,121.3 30.3,131.7C30.3,142.1 35.6,144 43.6,139.7C51.6,134.7 133.5,87.5 141.5,83C149.3,78.5 149,72.5 141.5,68.2C134,63.8 52.2,16.4 43.3,11.1Z"/>
+                                    </svg>
+                                </div>
+                                <div class="big-pause-button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                                        <rect width="18%" height="90%" x="22.5%" y="5%" rx="5%" ry="5%"/>
+                                        <rect width="18%" height="90%" x="62.5%" y="5%" rx="5%" ry="5%"/>
+                                    </svg>
+                                </div>
                             </div>
-                        </div>
-                        <div class="player__progressbar-holder">
-                            <div class="player__progressbar"></div>
-                        </div>
-                        <div class="player__controls controls">
-                            <button class="bttn controls__bttn controls__bttn--prev">
-                                <i class="fa fa-backward"></i>
-                            </button>
-                            <button class="bttn controls__bttn controls__bttn--play-pause">
-                                <i class="fa fa-fw fa-play"></i>
-                            </button>
-                            <button class="bttn controls__bttn controls__bttn--next">
-                                <i class="fa fa-forward"></i>
-                            </button>
+                            <div class="playlist-wrap">
+                                <h2>Mythium</h2>
+                                <ol>
+                                    <li><a href="//archive.org/download/mythium/JLS_ATI.mp3" data-artist="track 1">All This Is - Joe L.'s Studio</a></li>
+                                    <li><a href="//archive.org/download/mythium/BS_TF.mp3" data-artist="track 2">The Forsaken - Broadwing Studio (Final Mix)</a></li>
+                                    <li><a href="//archive.org/download/mythium/BS_ATKM.mp3" data-artist="track 3">All The King's Men - Broadwing Studio (Final Mix)</a></li>
+                                    <li><a href="//archive.org/download/mythium/BSFM_TF.mp3" data-artist="track 4">The Forsaken - Broadwing Studio (First Mix)</a></li>
+                                    <li><a href="//archive.org/download/mythium/BSFM_ATKM.mp3" data-artist="track 5">All The King's Men - Broadwing Studio (First Mix)</a></li>
+                                </ol>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -134,6 +134,12 @@
 /* XS Portrait */
 @media (max-width: 479px) {
 
+  .player-wrap .playlist-wrap li, .player-wrap .playlist-wrap a[href]:link, .player-wrap .playlist-wrap a[href]:active, .player-wrap .playlist-wrap a[href]:visited {
+    text-decoration: none;
+    color: #434546;
+    height: 40px;
+  }
+
   .guitar, .old{
     display: none;
   }
