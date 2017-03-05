@@ -298,6 +298,10 @@ h2 {
 /*************************
 ******galerie CSS****
 **************************/
+a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www.wonderplugin.com/wordpress-gallery/"] > div {
+  display: none !important;
+  top: -20px !important; }
+
 #galerie {
   background-color: #ecedef;
   background-position: center bottom;
@@ -316,29 +320,29 @@ h2 {
   #galerie p {
     text-align: justify; }
 
-#main-slider img {
-  width: 100%; }
-
-#main-slider .carousel-indicators li {
-  background-color: #f6aa23;
-  border: 1px solid #f6aa23; }
-
-#main-slider .carousel-indicators li.active {
-  background-color: #fff;
-  border: 1px solid #fff; }
+#wonderplugingridgallery-1 .wonderplugin-gridgallery-loadmore-btn {
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  background: #373737 !important;
+  color: #f6aa23 !important;
+  text-shadow: none !important; }
+  #wonderplugingridgallery-1 .wonderplugin-gridgallery-loadmore-btn:hover {
+    background: #212020 !important;
+    color: #fff !important;
+    text-shadow: none !important; }
 
 .galerie_link {
   text-transform: uppercase;
   text-align: right;
   margin-top: 30px; }
-  .galerie_link a h3 {
+  .galerie_link h3 {
     font-size: 24px;
+    color: #f5a10b;
+    cursor: pointer; }
+  .galerie_link #toggleGalerie:hover {
     color: #f6aa23; }
-  .galerie_link a:hover {
-    color: #f6aa23; }
-  .galerie_link a:hover i {
+  .galerie_link #toggleGalerie:hover i {
     margin-left: 35px; }
-  .galerie_link a i {
+  .galerie_link #toggleGalerie i {
     margin-left: 15px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;

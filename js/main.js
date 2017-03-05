@@ -4,6 +4,19 @@ $(document).ready(function(){
 		$('.navbar-brand').show();
 	}
 
+	var galerie = $('.wonderplugingridgallery');
+	galerie.delay(1000).slideUp();
+	$("#toggleGalerie").click(function () {
+		if( galerie.css("display") == "block" ){
+			galerie.slideUp();
+		}
+		else{
+			galerie.slideDown();
+		}
+	});
+
+
+
 	//Scroll Menu
 	function menuToggle()
 	{

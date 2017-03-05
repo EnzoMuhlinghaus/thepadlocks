@@ -7,11 +7,16 @@
 </footer>
 <!--/#footer-->
 
-<script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.js"></script>
+<?php wp_footer(); ?>
+
 <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.nav.js"></script>
 <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/smoothscroll.js"></script>
 <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.parallax.js"></script>
 <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.nav.js"></script>
 <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/main.js"></script>
 <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/player.js"></script>
+
+
+</body>
+</html>

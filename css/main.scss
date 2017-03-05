@@ -386,6 +386,11 @@ h2 {
 ******galerie CSS****
 **************************/
 
+a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www.wonderplugin.com/wordpress-gallery/"] > div{
+  display: none !important;
+  top: -20px !important;
+}
+
 #galerie {
   background-color: $bgblanc;
   background-position: center bottom;
@@ -408,19 +413,16 @@ h2 {
   }
 }
 
-#main-slider {
-  img {
-    width: 100%
-  }
+#wonderplugingridgallery-1 .wonderplugin-gridgallery-loadmore-btn {
+  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  background: #373737 !important;
+  color: #f6aa23 !important;
+  text-shadow: none !important;
 
-  .carousel-indicators li {
-    background-color: $header;
-    border: 1px solid $header;
-  }
-
-  .carousel-indicators li.active {
-    background-color: #fff;
-    border: 1px solid #fff;
+  &:hover {
+    background: #212020 !important;
+    color: #fff !important;
+    text-shadow: none !important;
   }
 }
 
@@ -428,19 +430,20 @@ h2 {
   text-transform: uppercase;
   text-align: right;
   margin-top: 30px;
-  a {
-    h3{
-      font-size: 24px;
-      color: $header
-    }
+
+  h3{
+    font-size: 24px;
+    color: darken($header, 5);
+    cursor: pointer;
   }
-  a:hover {
-    color: $header
+
+  #toggleGalerie:hover {
+    color: $header;
   }
-  a:hover i {
+  #toggleGalerie:hover i {
     margin-left: 35px
   }
-  a i {
+  #toggleGalerie i {
     margin-left: 15px;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
