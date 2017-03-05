@@ -3,14 +3,6 @@ function plus_admin_bar () {
 show_admin_bar(false);
 }
 
-//add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
-//
-//function add_my_post_types_to_query( $query ) {
-//    if ( is_home() && $query->is_main_query() )
-//        $query->set( 'post_type', array( 'post', 'concerts' ) );
-//    return $query;
-//}
-
 function ajout_post_types() {
     register_post_type( 'dateconcerts',
         array(
@@ -69,6 +61,60 @@ function ajout_meta_boxes( $meta_boxes )
     );
     return $meta_boxes;
 }
+
+function ajout_post_type_album() {
+    register_post_type( 'albums',
+        array(
+            'labels' => array(
+                'name' => __( 'Albums' ),
+                'singular_name' => __( 'Album' )
+            ),
+            'public' => true,
+            'show_in_rest' => true,
+            'query_var' => true,
+            'supports' => array( 'title'),
+        )
+    );
+    // Mettre en commentaire la ligne qui suit après avoir testé le bon fonctionnement.
+//    flush_rewrite_rules( false );
+}
+
+add_action( 'init', 'ajout_post_type_album' );
+
+/*
+ * Ajout de champs personnalisés (avec le plug-in Meta Box à installer)
+ * http://metabox.io/docs/define-fields/
+ * https://github.com/rilwis/meta-box/blob/master/demo/demo.php
+ */
+add_filter( 'rwmb_meta_boxes', 'ajout_meta_boxes_albums' );
+function ajout_meta_boxes_albums( $meta_boxes )
+{
+    // Répetez pour chaque "boîte" (groupes de champs)
+    $meta_boxes[] = array(
+        // le titre de la boîte
+        'title'    => 'Meta boxes',
+        'post_types' => array( 'albums'),
+        // La liste des champs de formulaire affiché par la "boîte"
+        'fields' => array(
+            array(
+                'id'   => 'Cover',
+                'name' => __( 'Cover', 'media' ),
+                'type' => 'file_input',
+            ),
+            array(
+                'id'   => 'Pistes',
+                'name' => __( 'Pistes', 'media' ),
+                'type' => 'file_advanced',
+            ),
+        )
+    );
+    return $meta_boxes;
+}
+
+
+
+
+
 
 /**
  * Pour aider à trouver les templates à utiliser
