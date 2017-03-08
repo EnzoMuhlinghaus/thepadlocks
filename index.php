@@ -2,14 +2,23 @@
 
     <section id="explore">
         <div class="container">
-            <h1 class="titre">THE PADLOCKS</h1>
+            <h1 class="titre hideme animated">THE PADLOCKS</h1>
             <div class="row">
-                <div class="col-md-5 col-sm-12">
+                <div class="col-md-5 col-sm-12 hideme__f animated">
                     <img class="img-responsive img-thumbnail" src="<?php bloginfo('template_directory' ); ?>/img/bggif.gif" alt="">
                 </div>
                 <div class="col-sm-12 col-md-7">
-                    <h2>qui sommes-nous ?</h2>
-                    <p>
+                    <h2 class="hideme animated">qui sommes-nous ?</h2>
+                    <p class="hideme__r animated">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Vivamus ipsum metus, semper tristique consequat quis, efficitur non risus. Nam quis mauris velit. Fusce mauris enim, facilisis a egestas vel, venenatis et tortor.
+                        Sed eros nunc, gravida pharetra lectus id, sodales imperdiet dolor. Integer et mattis ligula, cursus fringilla lorem. Nullam porttitor facilisis lectus.
+                        Etiam porttitor orci turpis, vitae ultrices nisi varius non. Suspendisse tincidunt massa ut commodo rutrum. Vestibulum vitae ultrices elit.
+                        Etiam consequat enim ac ex eleifend, quis dictum enim mollis. Sed feugiat tortor erat, non facilisis augue vestibulum ac.
+                        Aenean hendrerit justo in metus vestibulum gravida.
+                    </p>
+                    <br><br>
+                    <p class="hideme__r animated">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Vivamus ipsum metus, semper tristique consequat quis, efficitur non risus. Nam quis mauris velit. Fusce mauris enim, facilisis a egestas vel, venenatis et tortor.
                         Sed eros nunc, gravida pharetra lectus id, sodales imperdiet dolor. Integer et mattis ligula, cursus fringilla lorem. Nullam porttitor facilisis lectus.
@@ -26,23 +35,23 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-lg-8 col-lg-offset-2 col-md-12 rowTeam">
-                    <h2 class="heading">Musiciens</h2>
+                    <h2 class="heading hideme animated">Musiciens</h2>
                     <div class="row">
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12 hideme__f animated">
                             <div class="single-event">
                                 <img class="img-responsive" src="<?php bloginfo('template_directory' ); ?>/img/team/team1.png" alt="team-image">
                                 <h4>Corentin Roux</h4>
                                 <h5>Voix, Guitare</h5>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12 hideme__u animated">
                             <div class="single-event">
                                 <img class="img-responsive" src="<?php bloginfo('template_directory' ); ?>/img/team/team2.png" alt="team-image">
                                 <h4>Nicolas Bertello</h4>
                                 <h5>Basse, Choeurs</h5>
                             </div>
                         </div>
-                        <div class="col-md-4 col-sm-12">
+                        <div class="col-md-4 col-sm-12 hideme__r animated">
                             <div class="single-event">
                                 <img class="img-responsive" src="<?php bloginfo('template_directory' ); ?>/img/team/team3.png" alt="team-image">
                                 <h4>Max Sanfilippo</h4>
@@ -62,7 +71,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 player-container">
-                    <h2 id="album">ECOUTEZ NOUS !</h2>
+                    <h2 id="album" class="hideme__u animated">ECOUTEZ NOUS !</h2>
 
                     <?php
                     $args = array( 'post_type' => 'albums', 'posts_per_page' => 20 );
@@ -73,7 +82,7 @@
                         <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <?php $files = rwmb_meta( 'Pistes', array(), get_the_ID());
                             ?>
-                            <div class="page">
+                            <div class="page hideme animated">
                                 <div id="player-wrap<?php echo get_the_ID() ?>" class="player-wrap track-view light" data-url="" data-title="" data-artist="" style="background-image: url('<?php echo get_post_meta( get_the_ID(), 'Cover', true ); ?>');">
                                     <audio preload></audio>
                                     <div class="player">
@@ -164,13 +173,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12 front">
-                    <h2>PROCHAIN CONCERTS</h2>
+                    <h2 class="hideme animated">PROCHAIN CONCERTS</h2>
                     <?php
                         $args = array( 'post_type' => 'dateconcerts', 'posts_per_page' => 20 );
                         $the_query = new WP_Query( $args );
                     ?>
                     <table cellpadding="0" cellspacing="0" class="concerts" width="100%">
-                        <thead>
+                        <thead class="hideme animated">
                             <tr>
                                 <th class="date">Date</th>
                                 <th class="salle">Salle</th>
@@ -181,7 +190,7 @@
                         <tbody>
                             <?php if ( $the_query->have_posts() ) : ?>
                                 <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
-                                    <tr>
+                                    <tr class="hideme__u animated">
                                         <td class="date"><?php echo get_post_meta( get_the_ID(), 'date', true ); ?></td>
                                         <td class="salle"><?php echo get_post_meta( get_the_ID(), 'salle', true ); ?></td>
                                         <td class="lieu"><?php echo get_post_meta( get_the_ID(), 'lieu', true ); ?></td>
@@ -208,10 +217,13 @@
         <div class="row">
             <div class="col-md-12">
                 <a href="#galerie">
-                    <h2>GALERIE</h2>
-                    <?php echo do_shortcode('[wonderplugin_gallery id="1"]'); ?>
+                    <h2 class="hideme animated">GALERIE</h2>
+                    <div class="hideme animated">
+                        <?php echo do_shortcode('[wonderplugin_gallery id="1"]'); ?>
+                    </div>
+
                 </a>
-                <div class="galerie_link">
+                <div class="galerie_link hideme__f animated">
                     <h3 id="toggleGalerie">Voir toute la galerie <i class="fa fa-angle-down"></i></h3>
                 </div>
 
@@ -226,19 +238,19 @@
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-md-offset-6 front">
                         <div id="contact-section">
-                            <h2>Contactez nous !</h2>
+                            <h2 class="hideme__f animated">Contactez nous !</h2>
                             <div class="status alert alert-success" style="display: none"></div>
                             <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="<?php bloginfo('template_directory' ); ?>/sendemail.php">
-                                <div class="form-group">
+                                <div class="form-group hideme animated">
                                     <input type="text" name="name" class="form-control" required="required" placeholder="Entrez votre nom">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group hideme animated">
                                     <input type="email" name="email" class="form-control" required="required" placeholder="Entrez votre email">
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group hideme animated">
                                     <textarea name="message" id="message" required="required" class="form-control" rows="4" placeholder="Entrez votre message"></textarea>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group hideme__u animated">
                                     <button type="submit" class="btn btn-primary pull-right">Send</button>
                                 </div>
                             </form>

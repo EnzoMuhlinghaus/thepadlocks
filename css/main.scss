@@ -21,6 +21,19 @@ $noirclair : #373737;
   outline: none !important;
 }
 
+.hideme {
+    opacity: 0;
+   &__f{
+     opacity: 0;
+   }
+  &__r{
+    opacity: 0;
+  }
+  &__u{
+    opacity: 0;
+  }
+}
+
 .nopdl{
   padding-left: 0!important;
 }
@@ -248,7 +261,7 @@ h2 {
 #home {
   position: relative;
   overflow: hidden;
-  height: 800px;
+  height: 101vh;
 }
 
 /*************************
@@ -370,16 +383,17 @@ h2 {
       font-weight: bold;
     }
   }
-}
 
-#concert h2 {
-  font-size: 42px;
-  text-transform: uppercase;
-  text-align: center;
-}
+  h2 {
+    margin: 25px 0;
+    font-size: 42px;
+    text-transform: uppercase;
+    text-align: center;
+  }
 
-#concert p {
-  text-align: justify;
+  p {
+    text-align: justify;
+  }
 }
 
 /*************************
@@ -414,9 +428,10 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
 }
 
 #wonderplugingridgallery-1 .wonderplugin-gridgallery-loadmore-btn {
-  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-family: 'Yanone Kaffeesatz', 'sans-serif' !important;
+  font-size: 24px !important;
   background: #373737 !important;
-  color: #f6aa23 !important;
+  color: $header !important;
   text-shadow: none !important;
 
   &:hover {

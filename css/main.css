@@ -12,6 +12,15 @@
 * {
   outline: none !important; }
 
+.hideme {
+  opacity: 0; }
+  .hideme__f {
+    opacity: 0; }
+  .hideme__r {
+    opacity: 0; }
+  .hideme__u {
+    opacity: 0; }
+
 .nopdl {
   padding-left: 0 !important; }
 
@@ -194,7 +203,7 @@ h2 {
 #home {
   position: relative;
   overflow: hidden;
-  height: 800px; }
+  height: 101vh; }
 
 /*************************
 *******Explore CSS******
@@ -286,14 +295,13 @@ h2 {
   #concert table.concerts .infos {
     color: #373737;
     font-weight: bold; }
-
-#concert h2 {
-  font-size: 42px;
-  text-transform: uppercase;
-  text-align: center; }
-
-#concert p {
-  text-align: justify; }
+  #concert h2 {
+    margin: 25px 0;
+    font-size: 42px;
+    text-transform: uppercase;
+    text-align: center; }
+  #concert p {
+    text-align: justify; }
 
 /*************************
 ******galerie CSS****
@@ -321,9 +329,10 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
     text-align: justify; }
 
 #wonderplugingridgallery-1 .wonderplugin-gridgallery-loadmore-btn {
-  font-family: 'Yanone Kaffeesatz', 'sans-serif';
+  font-family: 'Yanone Kaffeesatz', 'sans-serif' !important;
+  font-size: 24px !important;
   background: #373737 !important;
-  color: #f6aa23 !important;
+  color: #1B7B98 !important;
   text-shadow: none !important; }
   #wonderplugingridgallery-1 .wonderplugin-gridgallery-loadmore-btn:hover {
     background: #212020 !important;

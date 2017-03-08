@@ -4,7 +4,7 @@
             <p> Copyright  &copy; 2017 The Padlocks <br> Code et Design par <a target="_blank" href="http://www.enzomuhlinghaus.fr/">Enzo Muhlinghaus</a></p>
         </div>
     </div>
-    <div class="backtotop show" id="backtotop">
+    <div class="backtotop" id="backtotop">
         <img src="<?php bloginfo('template_directory' ); ?>/img/backtotop.png" alt="backtotop">
     </div>
 </footer>
