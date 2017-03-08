@@ -1,6 +1,6 @@
 $bggris:#c7c7c7;
 $bgblanc:#ecedef;
-$header:#f6aa23; //#f6aa23; //
+$header:#1B7B98; //#1B7B98; //
 $black : rgb(24, 24, 24);
 $noirclair : #373737;
 
@@ -115,9 +115,9 @@ h2 {
 }
 
 .social-icons a {
-  font-size: 18px;
+  font-size: 26px;
   color: #fff;
-  padding-left:20px;
+  padding-left: 20px;
 }
 
 .social-icons a:hover .fa-facebook{
@@ -577,6 +577,31 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
 /*************************
 ******Footer CSS****
 **************************/
+
+.backtotop {
+  visibility: hidden;
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  z-index: 999999;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transition: all .6s;
+  width: 55px;
+
+  &.show {
+    visibility: visible;
+    bottom: 60px;
+    opacity: 0.7;
+  }
+
+  img{
+    width: 55px;
+  }
+}
+
 
 #footer {
   background-color: #212121;

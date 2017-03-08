@@ -86,7 +86,7 @@ h2 {
   padding-right: 5%; }
 
 .social-icons a {
-  font-size: 18px;
+  font-size: 26px;
   color: #fff;
   padding-left: 20px; }
 
@@ -97,7 +97,7 @@ h2 {
   color: #ec5675; }
 
 .navbar-brand {
-  background-color: #f6aa23;
+  background-color: #1B7B98;
   height: 90px;
   margin-bottom: 20px;
   position: relative;
@@ -109,7 +109,7 @@ h2 {
   top: -22px; }
 
 .navbar-right {
-  background-color: #f6aa23;
+  background-color: #1B7B98;
   padding: 0 95px 0 0;
   opacity: .9; }
 
@@ -125,10 +125,10 @@ h2 {
 .navbar-right li a:focus,
 .navbar-right .active a {
   background-color: #fff;
-  color: #f6aa23; }
+  color: #1B7B98; }
 
 .fixed-menu {
-  background-color: #f6aa23;
+  background-color: #1B7B98;
   position: fixed;
   top: 0;
   z-index: 99999; }
@@ -336,10 +336,10 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
   margin-top: 30px; }
   .galerie_link h3 {
     font-size: 24px;
-    color: #f5a10b;
+    color: #176982;
     cursor: pointer; }
   .galerie_link #toggleGalerie:hover {
-    color: #f6aa23; }
+    color: #1B7B98; }
   .galerie_link #toggleGalerie:hover i {
     margin-left: 35px; }
   .galerie_link #toggleGalerie i {
@@ -414,11 +414,11 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
   border-style: none none solid none;
   box-shadow: none; }
   #contact-section .form-control:focus {
-    border-color: #f6aa23; }
+    border-color: #1B7B98; }
 
 #contact-section .form-control:focus {
   box-shadow: none;
-  border-color: #f6aa23; }
+  border-color: #1B7B98; }
 
 #contact-section input {
   height: 44px; }
@@ -429,7 +429,7 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
 
 #contact-section .btn-primary {
   background-color: #373737;
-  color: #f6aa23;
+  color: #1B7B98;
   border: none;
   font-size: 24px;
   padding: 6px 42px;
@@ -443,6 +443,25 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
 /*************************
 ******Footer CSS****
 **************************/
+.backtotop {
+  visibility: hidden;
+  position: fixed;
+  bottom: 95px;
+  right: 25px;
+  z-index: 999999;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateZ(0);
+  -webkit-transform: translateZ(0);
+  transition: all .6s;
+  width: 55px; }
+  .backtotop.show {
+    visibility: visible;
+    bottom: 60px;
+    opacity: 0.7; }
+  .backtotop img {
+    width: 55px; }
+
 #footer {
   background-color: #212121;
   background-position: center bottom;
@@ -453,10 +472,10 @@ a[href="http://www.wonderplugin.com/wordpress-gridgallery/"], a[href="http://www
   padding: 35px 0; }
 
 #footer a {
-  color: #c48108; }
+  color: #0f4657; }
 
 #footer a:hover {
-  color: #f6aa23; }
+  color: #1B7B98; }
 
 @media screen and (max-width: 990px) {
   #explore h1.titre {

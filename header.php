@@ -5,11 +5,15 @@
     <title><?php bloginfo( 'name' ); ?></title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="canonical" href="<?php echo home_url(); ?>" />
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
     <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.js"></script>
-
+    <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.nav.js"></script>
+    <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/smoothscroll.js"></script>
+    <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.parallax.js"></script>
+    <script type="text/javascript" src="<?php bloginfo("stylesheet_directory"); ?>/js/jquery.scrollTo.js"></script>
+    
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
