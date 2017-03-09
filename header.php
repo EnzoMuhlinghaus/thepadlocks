@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/player.css">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/main.css">
     <link rel="stylesheet" href="<?php bloginfo("stylesheet_directory"); ?>/css/responsive.css">
-    <link rel="icon" href="<?php bloginfo("stylesheet_directory"); ?>/css/images/favicon.png">
+    
 </head>
 
 <body <?php body_class();?>>
